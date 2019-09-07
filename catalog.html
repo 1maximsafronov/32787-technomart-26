@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
+    <title>HTML Academy: Техномарт - Перфораторы</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="inner-page">
@@ -85,9 +85,19 @@
       <section class="filters">
         <h2 class="filters__title">Фильтры</h2>
         <form class="filters__form" action="index.html" method="post">
-          <fieldset class="filters__group">
+          <!-- Фильр по цене -->
+          <fieldset class="filters__grou price-filter">
             <legend>Цена:</legend>
+            <div class="price-filter__range">
+              <!-- Здесь будут ползунки цены -->
+            </div>
+            <p>
+              <input class="price-filter__min" type="text" name="min-price">
+              &mdash;
+              <input class="price-filter__man" type="text" name="max-price">
+            </p>
           </fieldset>
+          <!-- Фильтр производителей -->
           <fieldset class="filters__group">
             <legend>Производители:</legend>
             <ul class="filters__list">
@@ -113,6 +123,7 @@
               </li>
             </ul>
           </fieldset>
+          <!-- Фильтр по типу питания -->
           <fieldset class="filters__group">
             <legend>Питание:</legend>
             <ul class="filters__list">
@@ -133,7 +144,25 @@
       <section class="catalog">
         <h2 class="visually-hidden">Каталог перфораторов</h2>
         <!-- меню сортировки -->
-        <div class="catalog__sort"></div>
+        <div class="catalog__sort sorting">
+          <p class="sorting__title">Сортировка</p>
+          ul.sorting__nav
+          <sorting-nav>
+            <li class="sorting-nav__item">
+              <span class="sorting-nav__by-price">По цене</span>
+            </li>
+            <li class="sorting-nav__item">
+              <span class="sorting-nav__by-type">По типу</span>
+            </li>
+            <li class="sorting-nav__item">
+              <span class="sorting-nav__by-functions">По функционалу</span>
+            </li>
+            <li class="sorting-nav__item">
+              <span class="sorting-nav__toggle sorting-nav__toggle--up">По возрастанию</span>
+              <span class="sorting-nav__toggle sorting-nav__toggle--down">По убыванию</span>
+            </li>
+          </sorting-nav>
+        </div>
         <!-- Список товаров -->
         <ul class="catalog__list products">
           <li class="products__item">
