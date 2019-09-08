@@ -1,46 +1,57 @@
 /*
 var slider = document.querySelector('.promo__slider');
-console.log(slider);
 var slides = slider.querySelectorAll('.slider__item');
 var slidesDots = slider.querySelectorAll('.slider__dot');
-var sliderPrev = slider.querySelector('.slider__control--prev');
-var sliderNext = slider.querySelector('.slider__control--next');
-console.log(sliderNext);
 
 var slideIndex = 0;
 var slideActive = slides[slideIndex];
 var slideDotActive = slidesDots[slideIndex];
 slideActive.classList.add("slider__item--show");
+slideActive.classList.add("slider__dot--active");
 
-function dotClick(dotItem, slideItem){
-  dotItem.addEventListener("click", function(){
-    changeSlide(slideItem);
-  });
-}
-
-for(var i = 0; i < slidesDots.length; i++){
-  dotClick(slidesDots[i], i);
-}
+// Функция смены слайда по классу
 function changeSlide(itemIndex){
-  slideActive.classList.toggle('slider__item--show');
+  slideActive.classList.remove('slider__item--show');
   slides[itemIndex].classList.add("slider__item--show");
   slideActive = slides[itemIndex];
 
-  slideDotActive.classList.toggle('slider__dot--active');
+  slideDotActive.classList.remove('slider__dot--active');
   slidesDots[itemIndex].classList.add("slider__dot--active");
   slideDotActive = slidesDots[itemIndex];
 };
 
-sliderPrev.addEventListener("click", function(){
-  slideIndex =(slideIndex-1)%(slides.length);
-  if(slideIndex < 0){
-    slideIndex =slides.length-1;
-  }
-  changeSlide(slideIndex);
-});
+// Обработчик клика
+slider.addEventListener("click", function(event){
+  var indexTmp = slideIndex;
+  var targetClick = event.target;
+  var isTargetPrev = targetClick.classList.contains("slider__control--prev");
+  var isTargetNext = targetClick.classList.contains("slider__control--next");
+  var isTargetDot = targetClick.classList.contains("slider__dot");
 
-sliderNext.addEventListener("click", function(){
-  slideIndex =(slideIndex+1)%(slides.length);
-  changeSlide(slideIndex);
+//   Проверка клика по левой стрелке
+ if(isTargetPrev){
+    slideIndex =(slideIndex-1)%(slides.length);
+ }
+//   Проверка клика по правой стрелке
+ if(isTargetNext){
+    slideIndex =(slideIndex+1)%(slides.length);
+ }
+//   Проверка клика по точкам
+ if(isTargetDot){
+   for(var i = 0; i < slidesDots.length; i++){
+     if(targetClick === slidesDots[i])
+       {
+         slideIndex = i;
+       }
+   }
+ }
+//  Проверка на выход за пределы массива слайдов
+  if(slideIndex < 0){
+      slideIndex =slides.length-1;
+    }
+//   Вызов функции смены слайда c проверкой чтобы не вызывать функцию смены при любом обычном клике
+  if(slideIndex != indexTmp){
+    changeSlide(slideIndex);
+  }
 });
 */

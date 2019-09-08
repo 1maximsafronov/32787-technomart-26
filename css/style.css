@@ -1,218 +1,176 @@
 /*
 .btn {
-  display         : inline-block;
-
-  padding         : 10px 25px;
-
-  text-decoration : none;
-  text-transform  : uppercase;
-
-  color           : white;
-  border-radius   : 5px;
+  display:inline-block;
+  padding:10px 25px;
   background-color: rgba(0,0,0,0.1);
-
-  font-size       : 14px;
-  font-weight     : normal;
-  line-height     : 18px;
+  border-radius:5px;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:white;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
 }
-
 .btn--red {
   background-color: #ee3643;
 }
-
-.promo {
-  display     : flex;
-  flex-wrap   : wrap;
-
-  width       : 960px;
-  margin      : auto;
-  padding-left: -20px;
-
-  font-family : 'Cuprum', sans-serif;
+.promo{
+  margin:auto;
+  display:flex;
+  flex-wrap:wrap;
+  width:960px;
+  padding-left:-20px;
+  font-family: 'Cuprum', sans-serif;
 }
-
 .promo_wrap {
-  display       : flex;
-  flex-direction: column;
+  display:flex;
+  flex-direction:column;
 }
-
 .promo__item {
-  flex-grow       : 1;
-
-  box-sizing      : border-box;
-  width           : 300px;
-  margin-right    : 20px;
-  margin-bottom   : 20px;
-  padding         : 22px 70px 22px 25px;
-
-  color           : white;
+  box-sizing:border-box;
+  width:300px;
   background-color: #ffbf47;
-
-  font-weight     : bold;
+  padding:22px 70px 22px 25px;
+  margin-right:20px;
+  margin-bottom:20px;
+  color:white;
+  font-weight:bold;
+  flex-grow:1;
 }
+.promo__item--materials {
 
-.promo__item--materials {}
-
+}
 .promo__item--instruments {
   background-color: #3bbce3;
 }
-
 .promo__item--tech {
   background-color: #dc91d8;
 }
-
 .promo__item--sales {
   background-color: #8ed78f;
 }
-
 .promo__text {
-  margin     : 0;
-  padding    : 0;
-
-  font-size  : 24px;
+  font-size: 24px;
   line-height: 30px;
+  padding: 0;
+  margin: 0;
 }
-
 .promo__btn {
   margin-top: 10px;
 }
 
 .promo__slider {
-  position    : relative;
-
-  overflow    : hidden;
-
-  width       : 620px;
+  width:620px;
   margin-right: 20px;
+  position:relative;
+  overflow:hidden;
 }
 
 .slider__item {
-  position        : absolute;
-  z-index         : 1;
-
-  margin-bottom   : 20px;
-
-  color           : white;
   background-color: gray;
-}
-
-.slider__content {
-  position  : relative;
-
-  box-sizing: border-box;
-  width     : 100%;
-  min-height: 266px;
-  padding   : 22px 25px 80px;
-}
-
-.slider__title {
-  margin     : 0 0 5px;
-  padding    : 0;
-
-  font-size  : 36px;
-  line-height: 36px;
-}
-
-.slider__text {
-  margin     : 0;
-  padding    : 0;
-
-  font-size  : 18px;
-  line-height: 24px;
-}
-
-.slider__image {
-  position: absolute;
-  top     : 0;
-  left    : 0;
-
-  margin  : 0;
-  padding : 0;
-}
-
-.slider__btn {
-  position: absolute;
-  bottom  : 22px;
-}
-
-.slider__control {
-  position           : absolute;
-  z-index            : 10;
-
-  display            : block;
-
-  width              : 22px;
-  height             : 40px;
-
-  cursor             : pointer;
-
-  background-image   : url("https://cdn2.iconfinder.com/data/icons/web-iconset-pt-3/100/110_-_Play-512.png");
-  background-repeat  : no-repeat;
-  background-position: center center;
-  background-size    : 70px 90px;
-}
-
-.slider__control--prev {
-  top      : 50%;
-  left     : 25px;
-
-  transform: rotate(180deg) translateY(50%);
-}
-
-.slider__control--next {
-  top      : 50%;
-  right    : 25px;
-
-  transform: translateY(-50%);
+  color:white;
+  margin-bottom: 20px;
+  position:absolute;
+  z-index:1;
+  opacity:0;
+  transition-duration: 1s;
+  transition-timing-function:linear;
 }
 
 .slider__item--show {
-  z-index: 5;
+  z-index:5;
+  opacity:1;
+  transition-duration: 1s;
+  transition-timing-function:linear;
+
 }
+
+.slider__content {
+  position:relative;
+  width:100%;
+  min-height:266px;
+  padding: 22px 25px 80px 25px;
+  box-sizing:border-box;
+}
+.slider__title {
+  padding: 0;
+  margin: 0;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 5px;
+}
+
+.slider__text {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+.slider__image {
+  padding: 0;
+  margin: 0;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.slider__btn {
+  position:absolute;
+  bottom:22px;
+}
+.slider__control {
+  position:absolute;
+  width:22px;
+  height:40px;
+  display:block;
+  background-image: url("https://cdn2.iconfinder.com/data/icons/web-iconset-pt-3/100/110_-_Play-512.png");
+  background-size: 70px 90px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor:pointer;
+  z-index:10;
+}
+.slider__control--prev {
+  transform:rotate(180deg) translateY(50%);
+  top:50%;
+  left:25px;
+}
+.slider__control--next {
+  transform:translateY(-50%);
+  top:50%;
+  right:25px;
+}
+
+
 
 .slider_dots {
-  position  : absolute;
-  z-index   : 10;
-  bottom    : 46px;
-  left      : 50%;
-
-  display   : flex;
-
-  margin    : 0;
-  padding   : 0;
-
-  list-style: none;
-
-  transform : translateX(-50%);
+  margin: 0;
+  padding: 0;
+  list-style:none;
+  position:absolute;
+  left:50%;
+  bottom:46px;
+  transform:translateX(-50%);
+  z-index:10;
+  display:flex;
 }
-
 .slider__dot {
-  position        : relative;
-
-  width           : 10px;
-  height          : 10px;
-  margin-left     : 10px;
-
-  cursor          : pointer;
-
-  border-radius   : 50%;
-  background-color: white;
+  width:10px;
+  height:10px;
+  background-color:white;
+  margin-left:10px;
+  border-radius:50%;
+  position:relative;
+  cursor:pointer;
 }
-
 .slider__dot--active:before {
-  position        : absolute;
-  top             : 50%;
-  left            : 50%;
-
-  display         : block;
-
-  width           : 6px;
-  height          : 6px;
-
-  content         : "";
-  transform       : translate(-50%, -50%);
-
-  border-radius   : 50%;
+  display:block;
+  content:"";
+  width:6px;
+  height:6px;
   background-color: #ee3643;
-}
-*/
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+} */
