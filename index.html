@@ -13,10 +13,12 @@
     <!-- Навигация по покупкам и заказам -->
     <div class="shop-nav">
       <div class="main-header__logo site-logo">
-        <a><img src="img/logo-technomart.svg" alt="Логотип Техномарт"></a>
+        <a>
+          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Интернет-магазина Техномарт">
+        </a>
       </div>
       <form class="shop-nav__search-form" action="index.html" method="get">
-        <input class="shop-nav__search-input" id="site-search" type="text" name="search">
+        <input class="shop-nav__search-input" id="site-search" type="text" name="search" value="">
         <label class="visually-hidden" for="site-search">Строка поиска</label>
       </form>
       <a class="shop-nav__bookmarks" href="#">Закладки</a>
@@ -86,10 +88,9 @@
         </p>
       </div>
       <div class="promo__slider slider">
-
         <div class="slider__item slider__item--show">
           <p class="slider__image">
-            <img width="620" height="266" src="img/slider-perforator.jpg" alt="строитель с перфоратором">
+            <img width="620" height="266" src="img/slider-perforator.jpg" alt="Cтроитель с перфоратором">
           </p>
           <div class="slider__content">
             <h3 class="slider__title">Перфораторы</h3>
@@ -97,7 +98,6 @@
             <a class="slider__btn btn btn--red" href="#">Открыть каталог</a>
           </div>
         </div>
-
         <div class="slider__item">
           <p class="slider__image">
             <img width="620" height="266" src="img/slider-drill.jpg" alt="Строитель с дрелью">
@@ -108,10 +108,9 @@
             <a class="slider__btn btn btn btn--red" href="#">Открыть каталог</a>
           </div>
         </div>
-
         <ul class="slider_dots">
           <li class="slider__dot slider__dot--active"></li>
-          <li class="slider__dot "></li>
+          <li class="slider__dot"></li>
         </ul>
         <span class="slider__control slider__control--prev"></span>
         <span class="slider__control slider__control--next"></span>
@@ -135,48 +134,55 @@
       <a class="popular-product__all btn" href="#">Все популярные товары</a>
       <ul class="popular-product__list products">
         <li class="products__item">
+          <h3 class="products__title">Перфоратор BOSCH BFG 9000</h3>
           <p class="products__image">
             <img width="218" height="170" src="img/Perforator-1.jpg" alt="Перфоратор Bosch BFG 9000">
           </p>
-          <h3 class="products__title">Перфоратор BOSCH BFG 9000</h3>
-          <del class="products__discount">32500 Р.</del>
-          <ins class="products__price">25500 Р.</ins>
+          <p class="products__price-info">
+            <del class="products__discount">32500 Р.</del>
+            <ins class="products__price">25500 Р.</ins>
+          </p>
           <div class="products__get">
             <a class="products__buy btn btn--green" href="#">Купить</a>
             <a class="products__add-bookmark btn btn--green-border" href="#">В закладки</a>
           </div>
         </li>
         <li class="products__item">
+          <h3 class="products__title">Перфоратор BOSCH BFG 3000</h3>
           <p class="products__image">
             <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
           </p>
-          <h3 class="products__title">Перфоратор BOSCH BFG 3000</h3>
-          <del class="products__discount">22500 Р.</del>
-          <ins class="products__price">15500 Р.</ins>
+          <p class="products__price-info">
+            <del class="products__discount">22500 Р.</del>
+            <ins class="products__price">15500 Р.</ins>
+          </p>
           <div class="products__get">
             <a class="products__buy btn btn--green" href="#">Купить</a>
             <a class="products__add-bookmark btn btn--green-border" href="#">В закладки</a>
           </div>
         </li>
         <li class="products__item">
+          <h3 class="products__title">Перфоратор BOSCH BFG 6000</h3>
           <p class="products__image">
             <img width="218" height="170" src="img/Perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
           </p>
-          <h3 class="products__title">Перфоратор BOSCH BFG 6000</h3>
-          <del class="products__discount">30500 Р.</del>
-          <ins class="products__price">25500 Р.</ins>
+          <p class="products__price-info">
+            <del class="products__discount">30500 Р.</del>
+            <ins class="products__price">25500 Р.</ins>
+          </p>
           <div class="products__get">
             <a class="products__buy btn btn--green" href="#">Купить</a>
             <a class="products__add-bookmark btn btn--green-border" href="#">В закладки</a>
           </div>
         </li>
         <li class="products__item products__item--new">
+          <h3 class="products__title">Перфоратор BOSCH BFG 2000</h3>
           <p class="products__image">
             <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosсh BFG 2000">
           </p>
-          <h3 class="products__title">Перфоратор BOSCH BFG 2000</h3>
-
-          <p class="products__price">12500 Р.</p>
+          <p class="products__price-info">
+            <span class="products__price">12500 Р.</span>
+          </p>
           <div class="products__get">
             <a class="products__buy btn btn--green" href="#">Купить</a>
             <a class="products__add-bookmark btn btn--green-border" href="#">В закладки</a>
@@ -191,42 +197,42 @@
       <ul class="popular-manufacturer__list">
         <li>
           <a class="popular-manufacturer__link" href="#">
-            <img width="126" height="37" src="img/logo-bosch.png" alt="логотип Bosch">
+            <img width="126" height="37" src="img/logo-bosch.png" alt="Логотип производителя Bosch">
           </a>
         </li>
         <li>
           <a class="popular-manufacturer__link" href="#">
-            <img width="123" height="40" src="img/logo-makita.png" alt="логотип Makita">
+            <img width="123" height="40" src="img/logo-makita.png" alt="Логотип производителя Makita">
           </a>
         </li>
         <li>
           <a class="popular-manufacturer__link" href="#">
-            <img width="146" height="44" src="img/logo-DeWALT.png" alt="логотип DeWalt">
+            <img width="146" height="44" src="img/logo-DeWALT.png" alt="Логотип производителя DeWalt">
           </a>
         </li>
         <li>
           <a class="popular-manufacturer__link" href="#">
-            <img width="200" height="88" src="img/logo-interskol.png" alt="логотип Интерскол">
+            <img width="200" height="88" src="img/logo-interskol.png" alt="Логотип производителя Интерскол">
           </a>
         </li>
         <li>
           <a class="popular-manufacturer__link" href="#">
-            <img width="169" height="31" src="img/logo-hitachi.png" alt="логотип Hitachi">
+            <img width="169" height="31" src="img/logo-hitachi.png" alt="Логотип производителя Hitachi">
           </a>
         </li>
         <li>
           <a class="popular-manufacturer__link" href="#">
-            <img width="121" height="73" src="img/logo-lg.png" alt="логотип LG">
+            <img width="121" height="73" src="img/logo-lg.png" alt="Логотип производителя LG">
           </a>
         </li>
         <li>
           <a class="popular-manufacturer__link" href="#">
-            <img width="151" height="96" src="img/logo-aeg.png" alt="логотип AEG Power solution">
+            <img width="151" height="96" src="img/logo-aeg.png" alt="Логотип производителя AEG Power solution">
           </a>
         </li>
         <li>
           <a class="popular-manufacturer__link" href="#">
-            <img width="204" height="69" src="img/logo-metabo.png" alt="логотип Metabo">
+            <img width="204" height="69" src="img/logo-metabo.png" alt="Логотип производителя Metabo">
           </a>
         </li>
       </ul>
@@ -294,7 +300,7 @@
       <p class="contacts__text">Вы можете забрать товар сам, заехав в наш офис:</p>
       <p class="contacts__map">
         <a class="contacts__map-link" href="#">
-          <img width="300" height="158" src="img/small-map.png" alt="Как проехать">
+          <img width="300" height="158" src="img/small-map.png" alt="Офис по адресу Санкт-Петербург, ул. Большая Конюшенная 19/8">
         </a>
       </p>
       <a class="contacts__write-us btn" href="#">Заблудились? Напишите нам!</a>
@@ -304,7 +310,7 @@
   <footer class="main-footer">
     <div class="main-footer__contacts">
       <div class="main-footer__logo site-logo">
-        <img src="img/logo-technomart.svg" alt="Логотип Техномарт">
+        <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип Интернет-магазина Техномарт">
       </div>
       <address>
         г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8<br>
@@ -376,7 +382,7 @@
   <section class="modal modal-map">
     <h2 class="visually-gidden">Как к нам проехать</h2>
     <p class="modal-map__image">
-      <img width="940" height="447" src="img/big-map.png" alt="Как проехать">
+      <img width="940" height="447" src="img/big-map.png" alt="Офис по адресу Санкт-Петербург, ул. Большая Конюшенная 19/8">
     </p>
     <button class="modal__close" type="button">Закрыть</button>
   </section>
@@ -386,18 +392,17 @@
     <form class="modal-write-us__form" action="index.html" method="post">
       <p class="modal-write-us__name">
         <label for="name">Ваше имя:</label>
-        <input class="modal-write-us__name-input" id="name" type="text">
+        <input class="modal-write-us__name-input" name="name" value="" id="name" type="text">
       </p>
       <p class="modal-write-us__email">
         <label for="email">Ваш e-mail:</label>
-        <input class="modal-write-us__email-input" id="email" type="email">
+        <input class="modal-write-us__email-input" name="email" value="" id="email" type="email">
       </p>
       <p class="modal-write-us__message">
         <label for="text-message">Текст письма:</label>
-        <textarea class="modal-write-us__message-input" id="text-message" name="wrtie-us-text" rows="8" cols="80">
-  	        </textarea>
+        <textarea class="modal-write-us__message-input" id="text-message" name="wrtie-us-text" rows="8" cols="80"></textarea>
       </p>
-      <button class="modal-write-us__btn btn btn--red">Отправить</button>
+      <button class="modal-write-us__btn btn btn--red" type="submit">Отправить</button>
     </form>
     <button class="modal__close" type="button">Закрыть</button>
   </section>
