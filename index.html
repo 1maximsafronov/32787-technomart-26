@@ -18,8 +18,10 @@
         </a>
       </div>
       <form class="shop-nav__search-form" action="index.html" method="get">
-        <input class="shop-nav__search-input" id="site-search" type="text" name="search" value="">
-        <label class="visually-hidden" for="site-search">Строка поиска</label>
+				<p>
+					<label for="site-search">Поиск</label>
+	        <input class="shop-nav__search-input" id="site-search" type="text" name="search" value="">
+				</p>
       </form>
       <a class="shop-nav__bookmarks" href="#">Закладки</a>
       <a class="shop-nav__cart shop-nav__cart--empty" href="#">Корзина:0</a>
@@ -71,7 +73,7 @@
     <h1 class="visually-hidden">Интернет магазин строительных товаров Техномарт</h1>
     <!-- Промо блок со слайдером -->
     <section class="promo">
-      <h2 class="visually-hidden">Промо раздел</h2>
+      <h2 class="visually-hidden">Информация о промоакциях и скидках</h2>
       <div class="promo__item promo__item--materials promo__item--new">
         <p>Материалы
           <a class="promo__btn btn btn--gray" href="#">на любой вкус</a>
@@ -386,17 +388,17 @@
     </p>
     <button class="modal__close" type="button">Закрыть</button>
   </section>
-
+<!-- Попап с формой "написать нам" -->
   <section class="modal modal-write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="modal-write-us__form" action="index.html" method="post">
       <p class="modal-write-us__name">
         <label for="name">Ваше имя:</label>
-        <input class="modal-write-us__name-input" name="name" value="" id="name" type="text">
+        <input class="modal-write-us__name-input" name="name" value="" id="name" type="text" placeholder="Имя Фамилия">
       </p>
       <p class="modal-write-us__email">
         <label for="email">Ваш e-mail:</label>
-        <input class="modal-write-us__email-input" name="email" value="" id="email" type="email">
+        <input class="modal-write-us__email-input" name="email" value="" id="email" type="email" placeholder="email@example.com">
       </p>
       <p class="modal-write-us__message">
         <label for="text-message">Текст письма:</label>
