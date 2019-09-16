@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,9 +25,9 @@
 	        <input class="shop-nav__search-input" id="site-search" type="text" name="search" value="">
 				</p>
       </form>
-      <a class="shop-nav__bookmarks" href="#">Закладки</a>
-      <a class="shop-nav__cart shop-nav__cart--empty" href="#">Корзина:0</a>
-      <a class="shop-nav__order" href="#">Оформить заказ</a>
+      <a class="shop-nav__link shop-nav__bookmarks" href="#">Закладки</a>
+      <a class="shop-nav__link shop-nav__cart shop-nav__cart--empty" href="#">Корзина:0</a>
+      <a class="shop-nav__link shop-nav__order" href="#">Оформить заказ</a>
     </div>
     <nav class="main-nav">
       <p class="main-header__info">Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -36,10 +38,10 @@
       <!-- Блок с кнопками входа и личного кабинета -->
       <ul class="user-nav">
         <li class="user-nav__item">
-          <a class="user-nav__login btn" href="#">Войти</a>
+          <a class="user-nav__btn user-nav__login btn" href="#">Войти</a>
         </li>
         <li class="user-nav__item">
-          <a class="user-nav__registration btn" href="#">Регистрация</a>
+          <a class="user-nav__btn user-nav__registration btn" href="#">Регистрация</a>
         </li>
       </ul>
       <!-- Главное меню сайта -->
@@ -75,17 +77,17 @@
     <section class="promo">
       <h2 class="visually-hidden">Информация о промоакциях и скидках</h2>
       <div class="promo__item promo__item--materials promo__item--new">
-        <p>Материалы
+        <p class="promo__text">Материалы
           <a class="promo__btn btn btn--gray" href="#">на любой вкус</a>
         </p>
       </div>
       <div class="promo__item promo__item--instruments">
-        <p>Инструменты
+        <p class="promo__text">Инструменты
           <a class="promo__btn btn btn--gray" href="#">на все случаи</a>
         </p>
       </div>
       <div class="promo__item promo__item--tech">
-        <p>Техника
+        <p class="promo__text">Техника
           <a class="promo__btn btn btn--gray" href="#">для стройки</a>
         </p>
       </div>
@@ -119,12 +121,12 @@
       </div>
       <div class="promo_wrap">
         <div class="promo__item promo__item--sales">
-          <p>Скидки 50%
+          <p class="promo__text">Скидки 50%
             <a class="promo__btn btn btn--gray" href="#">на 350 товаров</a>
           </p>
         </div>
         <div class="promo__item promo__item--delivery">
-          <p>Доставка
+          <p class="promo__text">Доставка
             <a class="promo__btn btn btn--gray" href="#">бесплатно</a>
           </p>
         </div>
