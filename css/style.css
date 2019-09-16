@@ -13,8 +13,6 @@ a {
   text-decoration: none;
 }
 img {
-  max-width:100%;
-
   vertical-align: top;
 }
 .visually-hidden {
@@ -74,7 +72,7 @@ img {
   background-color: #ffffff;
 }
 .btn--green-border:active{
-opacity: 0.3;
+  opacity: 0.3;
   background-color: #ffffff;
 }
 .main-header{
