@@ -5,15 +5,12 @@ body {
   color:#000000;
   background-color:#ffffff;
 
-  font-family: "Cuprum";
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
 }
 a {
   text-decoration: none;
-}
-img {
-  vertical-align: top;
 }
 .visually-hidden {
   position: absolute;
@@ -28,14 +25,20 @@ img {
 
   border: 0;
 }
+.container {
+  width:940px;
+  margin:0 auto;
+  padding:0 10px;
+}
 .btn {
+  text-align:center;
   text-decoration:none;
   text-transform:uppercase;
 
-  color:white;
+  color:#ffffff;
   background-color: #ee3643;
 
-  font-family: "Cuprum";
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
@@ -54,7 +57,6 @@ img {
 }
 .btn--green:hover,
 .btn--green:focus {
-  outline: none;
   background-color: #5fbb2d;
 }
 .btn--green:active {
@@ -68,7 +70,6 @@ img {
 .btn--green-border:hover,
 .btn--green-border:focus{
   border: 3px solid #32425c;
-  outline: none;
   background-color: #ffffff;
 }
 .btn--green-border:active{
@@ -76,32 +77,57 @@ img {
   background-color: #ffffff;
 }
 .main-header{
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+
   background-color: #f3f7f8;
 }
-.main-header__logo {
+
+.site-logo {
+  display:block;
+
   background-color: #ee3643;
+  box-shadow: 0px 5px 0px 0px #b52933;
 }
-.main-header__logo:hover,
-.main-header__logo:focus{
+.site-logo:hover,
+.site-logo:focus{
   outline: none;
   background-color: #ca2c37;
 }
-.main-header__logo:active {
+.site-logo:active {
   background-color: #ba2732;
 }
-.main-header__logo-image {
+.main-header__logo {
+  box-sizing: border-box;
+  width:220px;
+  height:42px;
+  padding: 12px 0;
+
+  text-align:center;
 
 }
 .shop-nav {
+  margin-bottom: 46px;
+
   color: #ffffff;
   background-color: #293449;
 
-  font-family: "Cuprum";
   font-size: 17px;
   line-height: 18px;
 }
-
+.shop-nav__container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
 .shop-nav__link {
+  width:150px;
+  padding-top:12px;
+  padding-bottom:12px;
+
+  text-align:center;
+
   color: #ffffff;
   background-color: #293449;
 }
@@ -114,6 +140,54 @@ img {
   color: rgba(255, 255, 255, 0.6);
   background-color: #161d29;
 }
+.shop-nav__search-form {
+  margin: 0;
+  padding: 0;
+}
+.shop-nav__search {
+  margin: 0;
+  padding: 0;
+}
+.shop-nav__search-input {
+  box-sizing: border-box;
+  width:270px;
+  padding-top:12px;
+  padding-right:15px;
+  padding-bottom:12px;
+  padding-left:50px;
+
+  vertical-align:middle;
+
+  color:#ffffff;
+  border:none;
+  background-color: transparent;
+
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+
+  widows: 270px;
+}
+.shop-nav__search-input::placeholder {color:#ffffff;}
+.shop-nav__search-input::-webkit-input-placeholder {color:#ffffff;}
+.shop-nav__search-input::-moz-placeholder {color:#ffffff;}
+.shop-nav__search-input:-moz-placeholder {color:#ffffff;}
+.shop-nav__search-input:-ms-input-placeholder {color:#ffffff;}
+
+.shop-nav__search-input:hover{
+  background-color: #212a3a;
+}
+.shop-nav__search-input:focus {
+  color:#000000;
+  outline: none;
+  background-color: #ffffff;
+}
+.shop-nav__search-input:focus::placeholder {color:#000000;}
+.shop-nav__search-input:focus::-webkit-input-placeholder {color:#000000;}
+.shop-nav__search-input:focus::-moz-placeholder {color:#000000;}
+.shop-nav__search-input:focus:-moz-placeholder {color:#000000;}
+.shop-nav__search-input:focus:-ms-input-placeholder {color:#000000;}
+
 .shop-nav__order {
   background-color: #63a63e;
 }
@@ -126,9 +200,12 @@ img {
   background-color: #518534;
 }
 .main-header__info {
+  width:200px;
+  margin: 0;
+  padding: 0 50px;
+
   color:#ee3643;
 
-  font-family: "Cuprum";
   font-size: 16px;
   font-style: italic;
   line-height: 23px;
@@ -136,7 +213,6 @@ img {
 .main-header__contacts {
   color: #32425c;
 
-  font-family:"Cuprum";
   font-size: 14px;
   font-style: normal;
   line-height: 24px;
@@ -144,7 +220,6 @@ img {
 .main-header__phone {
   color: #ee3643;
 
-  font-family:"Cuprum";
   font-size: 21px;
   line-height: 21px;
 }
@@ -155,8 +230,8 @@ img {
   list-style: none;
 }
 .user-nav__btn {
-  color: #000;
-  background-color: #fff;
+  color: #000000;
+  background-color: #ffffff;
 
   font-size: 21px;
   line-height: 21px;
@@ -165,7 +240,7 @@ img {
 .user-nav__btn:focus {
   color: #ee3643;
   outline: none;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .user-nav__btn:active {
   color:rgba(0, 0, 0, 0.3);
@@ -189,19 +264,29 @@ img {
   color:#000000;
 }
 .site-nav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+
   margin: 0;
-  padding: 0;
+  margin-top:40px;
+  padding:0px 20px;
 
   list-style: none;
 
   color: #ffffff;
   background-color: #32425c;
+  box-shadow:0px 5px 0 0 #293449;
 
-  font-family: "Cuprum";
   font-size: 17px;
   line-height: 17px;
 }
 .site-nav__link {
+  display: block;
+
+  padding: 19px 30px;
+
   color: #ffffff;
   background-color: #32425c;
 
@@ -241,7 +326,6 @@ img {
 
   color: #ffffff;
 
-  font-family: "Cuprum";
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -314,7 +398,7 @@ padding: 0;
 
   list-style: none;
 
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: 700;
 }
 .products__title {
@@ -356,7 +440,7 @@ padding: 0;
   border-radius:5px;
   text-transform:uppercase;
   text-decoration:none;
-  color:white;
+  color:#ffffff;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
@@ -370,7 +454,6 @@ padding: 0;
   flex-wrap:wrap;
   width:960px;
   padding-left:-20px;
-  font-family: 'Cuprum', sans-serif;
 }
 .promo_wrap {
   display:flex;
@@ -383,7 +466,7 @@ padding: 0;
   padding:22px 70px 22px 25px;
   margin-right:20px;
   margin-bottom:20px;
-  color:white;
+  color:#ffffff;
   font-weight:bold;
   flex-grow:1;
 }
@@ -418,7 +501,7 @@ padding: 0;
 
 .slider__item {
   background-color: gray;
-  color:white;
+  color:#ffffff;
   margin-bottom: 20px;
   position:absolute;
   z-index:1;
@@ -506,7 +589,7 @@ padding: 0;
 .slider__dot {
   width:10px;
   height:10px;
-  background-color:white;
+  background-color:#ffffff;
   margin-left:10px;
   border-radius:50%;
   position:relative;
