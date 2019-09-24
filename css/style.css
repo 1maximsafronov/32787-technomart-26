@@ -210,7 +210,6 @@ a {
   font-size       : 17px;
   line-height     : 18px;
 
-  widows          : 270px;
 }
 
 .shop-nav__search-input::placeholder {
@@ -329,12 +328,12 @@ a {
 
   list-style: none;
 
-  widows    : 300px;
+  width     : 300px;
 
 }
 
 .user-nav--user-logined {
-  widows: 300px;
+  width: 300px;
 }
 
 .user-nav__item:first-child {
