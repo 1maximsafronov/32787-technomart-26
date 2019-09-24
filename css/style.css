@@ -1,3 +1,7 @@
+html {
+  min-width: 960px;
+}
+
 body {
   margin          : 0;
   padding         : 0;
@@ -8,6 +12,7 @@ body {
   font-family     : "Cuprum", Arial, sans-serif;
   font-size       : 17px;
   line-height     : 18px;
+
 }
 
 a {
@@ -765,14 +770,14 @@ a {
 }
 
 .products__title {
-  width      : 180px;
-  margin     : 0 auto;
-  padding    : 0;
+  width        : 180px;
+  margin       : 0 auto;
+  padding      : 0;
+  margin-bottom: 10px;
+  text-align   : center;
 
-  text-align : center;
-
-  font-size  : 18px;
-  line-height: 20px;
+  font-size    : 18px;
+  line-height  : 20px;
 }
 
 .products__image {
@@ -785,7 +790,7 @@ a {
   display       : flex;
   align-items   : center;
   flex-direction: column;
-
+  margin-top    : auto;
   text-transform: uppercase;
 
   font-size     : 17px;
@@ -799,7 +804,6 @@ a {
 }
 
 .products__price {
-  display            : block;
   display            : block;
 
   padding            : 10px 40px 10px 36px;
@@ -928,6 +932,20 @@ a {
   font-size  : 21px;
   font-weight: 700;
   line-height: 30px;
+}
+
+.menu-services:after {
+  content            : "";
+  display            : block;
+  width              : 10px;
+  height             : 279px;
+  background-image   : url("../img/service-shadow.png");
+  background-repeat  : no-repeat;
+  background-position: 0 0;
+  right              : 0;
+  top                : 50%;
+  transform          : translateY(-50%);
+  position           : absolute;
 }
 
 .services__list {
@@ -1447,7 +1465,7 @@ a {
 
 .main-footer__logo {
   width        : 220px;
-  margin-bottom: 21px;
+  margin-bottom: 33px;
 
   text-align   : center;
 
@@ -1472,21 +1490,25 @@ a {
   display        : flex;
   justify-content: flex-end;
 
-  margin         : 35px 0 0;
+  margin         : 38px 0 35px;
   padding        : 0;
 
   list-style     : none;
 }
 
 .footer-site-nav__item {
-  margin-left: 58px;
+  margin-left: 60px;
 }
 
 .footer-site-nav__link {
   color      : #f1f5f7;
-
+  font-weight: 400;
   font-size  : 18px;
   line-height: 24px;
+}
+
+.footer-site-nav--yellow-text {
+  margin-top: 0;
 }
 
 .footer-site-nav--yellow-text .footer-site-nav__link {
@@ -1594,13 +1616,13 @@ a {
 }
 
 .copyright__mail {
-  width  : 165px;
-  margin : 0 23px 0 0;
+  width  : 160px;
+  margin : 0 29px 0 0;
   padding: 0;
 }
 
 .copyright__site {
-  width  : 126px;
+  width  : 110px;
   margin : 0;
   padding: 0;
 }
