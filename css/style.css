@@ -117,6 +117,8 @@ a {
   display        : -ms-flex;
   display        : flex;
   justify-content: space-between;
+
+  margin-bottom: 40px;
 }
 
 .site-logo {
@@ -323,12 +325,11 @@ a {
   display   : flex;
   flex-wrap : wrap;
 
+  width     : 300px;
   margin    : 0;
   padding   : 0;
 
   list-style: none;
-
-  width     : 300px;
 
 }
 
@@ -395,7 +396,7 @@ a {
   display         : flex;
   flex-wrap       : wrap;
 
-  margin          : 40px 0 0;
+  margin          : 0;
   padding         : 0 20px;
 
   list-style      : none;
@@ -411,7 +412,7 @@ a {
 .site-nav__link {
   display         : block;
 
-  padding         : 19px 30px;
+  padding         : 20px 31px 18px 30px;
 
   color           : #ffffff;
   background-color: #32425c;
@@ -443,23 +444,18 @@ a {
   display      : -ms-flex;
   display      : flex;
   flex-wrap    : wrap;
+  justify-content: space-between;
 
-  width        : 960px;
   margin-bottom: 53px;
-  padding-left : -20px;
 }
 
 .promo__item {
-  flex-grow       : 1;
-
   box-sizing      : border-box;
   width           : 300px;
-  margin-right    : 20px;
   margin-bottom   : 20px;
   padding         : 20px 22px 23px;
 
   color           : #ffffff;
-  background-color: #ffbf47;
   background-color: #ffbf47;
 }
 
@@ -484,6 +480,8 @@ a {
 }
 
 .promo__item--sales {
+  flex-grow       : 1;
+
   background-color   : #8ed78f;
   background-image   : url("../img/icon-4.svg");
   background-repeat  : no-repeat;
@@ -491,6 +489,8 @@ a {
 }
 
 .promo__item--delivery {
+  flex-grow       : 1;
+
   background-color   : #ffc047;
   background-image   : url("../img/icon-5.svg");
   background-repeat  : no-repeat;
@@ -509,8 +509,6 @@ a {
 }
 
 .promo__btn {
-  display         : block;
-
   box-sizing      : border-box;
   width           : 135px;
   margin-top      : 12px;
@@ -535,7 +533,6 @@ a {
 }
 
 .promo__slider {
-  margin-right: 20px;
 }
 
 .slider {
@@ -624,17 +621,17 @@ a {
 
   cursor             : pointer;
 
-  background-image   : url("https://cdn2.iconfinder.com/data/icons/web-iconset-pt-3/100/110_-_Play-512.png");
   background-repeat  : no-repeat;
   background-position: center center;
-  background-size    : 70px 90px;
 }
 
 .slider__control--prev {
   top      : 50%;
   left     : 25px;
 
-  transform: rotate(180deg) translateY(50%);
+  transform:translateY(-50%);
+
+  background-image   : url("../img/icon-left.svg");
 }
 
 .slider__control--next {
@@ -642,6 +639,8 @@ a {
   right    : 25px;
 
   transform: translateY(-50%);
+
+  background-image   : url("../img/icon-right.svg");
 }
 
 .slider__dots {
@@ -703,8 +702,6 @@ a {
 
   margin-bottom   : 20px;
   padding         : 25px;
-
-  vertical-align  : middle;
 
   background-color: #f9f5f0;
 }
@@ -771,8 +768,9 @@ a {
 .products__title {
   width        : 180px;
   margin       : 0 auto;
-  padding      : 0;
   margin-bottom: 10px;
+  padding      : 0;
+
   text-align   : center;
 
   font-size    : 18px;
@@ -789,7 +787,9 @@ a {
   display       : flex;
   align-items   : center;
   flex-direction: column;
+
   margin-top    : auto;
+
   text-transform: uppercase;
 
   font-size     : 17px;
@@ -901,7 +901,6 @@ a {
 }
 
 .services__wrapper {
-  justify-content: flex-start;
 }
 
 .services__title {
@@ -934,17 +933,21 @@ a {
 }
 
 .menu-services:after {
-  content            : "";
+  position           : absolute;
+  top                : 50%;
+  right              : 0;
+
   display            : block;
+
   width              : 10px;
   height             : 279px;
+
+  content            : "";
+  transform          : translateY(-50%);
+
   background-image   : url("../img/service-shadow.png");
   background-repeat  : no-repeat;
   background-position: 0 0;
-  right              : 0;
-  top                : 50%;
-  transform          : translateY(-50%);
-  position           : absolute;
 }
 
 .services__list {
@@ -956,6 +959,7 @@ a {
   box-sizing      : border-box;
   width           : 240px;
   padding         : 15px 22px 18px;
+
   color           : #ffffff;
   background-color: #32425c;
   box-shadow      : inset 0 -1px 0 0 #293449, inset 0 1px 0 0 #405069;
@@ -963,8 +967,8 @@ a {
 
 .menu-services__item:focus,
 .menu-services__item:hover {
-  background-color: #293449;
   color           : #ffffff;
+  background-color: #293449;
 }
 
 .menu-services__item--active {
@@ -974,10 +978,13 @@ a {
 }
 
 .menu-services__desc {
+  position:relative;
+
   display   : -webkit-flex;
   display   : -ms-flex;
   display   : flex;
   flex-grow : 1;
+  flex-wrap: wrap;
 
   width     : auto;
   margin    : 0;
@@ -987,14 +994,19 @@ a {
 }
 
 .menu-services__desc-item {
-  display  : none;
+  position:absolute;
+
   flex-grow: 1;
 
+  opacity: 0;
   color    : #000000;
+
 }
 
 .menu-services__desc-item--show {
-  display: block;
+  position:relative;
+
+  opacity: 1;
 }
 
 .menu-services__desc--delivery {
@@ -1020,27 +1032,30 @@ a {
   padding       : 0;
 
   text-transform: uppercase;
-  font-weight   : 400;
+
   color         : #32425c;
 
   font-size     : 36px;
+  font-weight   : 400;
   line-height   : 36px;
 }
 
 .menu-services__text {
   width      : 320px;
   margin     : 0 0 30px;
+
   font-family: "PT Sans - Regular","Cuprum", Arial, sans-serif;
   font-size  : 13px;
   line-height: 24px;
 }
-
+.about-us{
+  width      : 540px;
+}
 .about-us__title {
   margin-bottom: 24px;
 }
 
 .about-us__text {
-  width      : 540px;
   margin     : 0 0 25px;
   padding    : 0;
 
@@ -1075,8 +1090,6 @@ a {
   top             : 50%;
   left            : 0;
 
-  display         : block;
-
   width           : 25px;
   height          : 2px;
 
@@ -1094,7 +1107,6 @@ a {
 }
 
 .contacts__text {
-
   width      : 200px;
   margin     : 0 0 32px;
   padding    : 0;
@@ -1321,7 +1333,7 @@ a {
 }
 
 .catalog {
-  width: 700px;
+  margin-left: 20px;
 }
 
 .catalog__sort {
@@ -1383,9 +1395,6 @@ a {
   line-height   : 18px;
 }
 
-.pagination__item:last-child {
-  margin-right: 0;
-}
 
 .pagination__link {
   display      : block;
@@ -1505,8 +1514,9 @@ a {
 
 .footer-site-nav__link {
   color      : #f1f5f7;
-  font-weight: 400;
+
   font-size  : 18px;
+  font-weight: 400;
   line-height: 24px;
 }
 
