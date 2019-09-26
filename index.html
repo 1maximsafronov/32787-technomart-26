@@ -394,32 +394,37 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal-map">
-    <h2 class="visually-gidden">Как к нам проехать</h2>
+  <section class="modal  modal-map">
+    <h2 class="visually-hidden">Как к нам проехать</h2>
     <p class="modal-map__image">
       <img width="940" height="447" src="img/big-map.png" alt="Офис по адресу Санкт-Петербург, ул. Большая Конюшенная 19/8">
     </p>
-    <button class="modal__close" type="button">Закрыть</button>
+    <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 <!-- Попап с формой "написать нам" -->
-  <section class="modal modal-write-us">
+  <section class="modal modal--show modal-write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="modal-write-us__form" action="index.html" method="post">
-      <p class="modal-write-us__name">
-        <label for="name">Ваше имя:</label>
-        <input class="modal-write-us__name-input" name="name" value="" id="name" type="text" placeholder="Имя Фамилия">
-      </p>
-      <p class="modal-write-us__email">
-        <label for="email">Ваш e-mail:</label>
-        <input class="modal-write-us__email-input" name="email" value="" id="email" type="email" placeholder="email@example.com">
-      </p>
-      <p class="modal-write-us__message">
-        <label for="text-message">Текст письма:</label>
-        <textarea class="modal-write-us__message-input" id="text-message" name="wrtie-us-text" rows="8" cols="80"></textarea>
-      </p>
-      <button class="modal-write-us__btn btn btn--red" type="submit">Отправить</button>
+      <div class="modal-write-us__wrapper">
+        <p class="modal-write-us__name">
+          <label class="modal-write-us__label" for="name">Ваше имя:</label>
+          <input class="modal-write-us__name-input" name="name" value="" id="name" type="text" placeholder="Имя Фамилия">
+        </p>
+        <p class="modal-write-us__email">
+          <label class="modal-write-us__label" for="email">Ваш e-mail:</label>
+          <input class="modal-write-us__email-input" name="email" value="" id="email" type="email" placeholder="email@example.com">
+        </p>
+        <p class="modal-write-us__message">
+          <label class="modal-write-us__label" for="text-message">Текст письма:</label>
+          <textarea class="modal-write-us__message-input" id="text-message" name="wrtie-us-text" rows="8" cols="80"></textarea>
+        </p>
+      </div>
+      <div class="modal-write-us__wrapper modal-write-us__wrapper--gray">
+        <button class="modal-write-us__btn btn btn--red" type="submit">Отправить</button>
+      </div>
+
     </form>
-    <button class="modal__close" type="button">Закрыть</button>
+    <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
   <script src="js/script.js"></script>
 </body>

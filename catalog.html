@@ -417,11 +417,16 @@
     </div>
   </footer>
   <!-- Попап при добавлении товара в корзину -->
-  <section class="modal modal-add-in-cart">
-    <h2 class="modal-add-in-cart__title">Товар добавлен в корзину</h2>
-    <a class="btn btn--red" href="#">Оформить заказ</a>
-    <button class="modal-add-in-cart__continue btn" type="button">Продолжить покупки</button>
-    <button class="modal__close" type="button">Закрыть</button>
+  <section class="modal modal--show modal-add-in-cart">
+      <div class="modal-write-us__wrapper">
+        <h2 class="modal-add-in-cart__title ">Товар добавлен в корзину</h2>
+      </div>
+
+    <div class="modal-write-us__wrapper modal-write-us__wrapper--gray">
+      <a class="modal-add-in-cart__btn btn btn--red" href="#">Оформить заказ</a>
+      <button class="modal-add-in-cart__btn modal-add-in-cart__btn--continue btn" type="button">Продолжить покупки</button>
+    </div>
+    <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
   <script src="js/script.js"></script>
 </body>

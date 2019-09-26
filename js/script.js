@@ -63,12 +63,12 @@ slider.addEventListener("click", function(event) {
 // Открытие блока с картой
 mapLink.addEventListener("click", function(event) {
   event.preventDefault();
-  modalMap.classList.add("modal--show");
+  mapModal.classList.add("modal--show");
 });
 // Открытие окна с формой обратной связи
 writeUsLink.addEventListener("click", function(event) {
   event.preventDefault();
-  modalWriteUs.classList.add("modal--show");
+  writeUsModal.classList.add("modal--show");
 });
 // Функция закрытия модальных блоков по клику
 function closeModal(modalElement) {
