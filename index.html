@@ -19,24 +19,28 @@
         <a class="main-header__logo site-logo">
           <img class="main-header__logo-image" src="img/logo-technomart.svg" width="109" height="18" alt="Логотип Интернет-магазина Техномарт">
         </a>
-      <form class="shop-nav__search-form" action="index.html" method="get">
-				<p class="shop-nav__search">
-					<label class="visually-hidden" for="site-search">Поиск</label>
-	        <input class="shop-nav__search-input" id="site-search" type="text" name="search" value="" placeholder="Поиск:">
-				</p>
-      </form>
-      <a class="shop-nav__link shop-nav__bookmarks" href="#">Закладки: 0</a>
-      <a class="shop-nav__link shop-nav__cart shop-nav__cart--empty" href="#">Корзина: 0</a>
-      <a class="shop-nav__link shop-nav__order" href="#">Оформить заказ</a>
+        <form class="shop-nav__search-form" action="index.html" method="get">
+  				<p class="shop-nav__search">
+  					<label class="visually-hidden" for="site-search">Поиск</label>
+  	        <input class="shop-nav__search-input" id="site-search" type="text" name="search" value="" placeholder="Поиск:">
+  				</p>
+        </form>
+        <a class="shop-nav__link shop-nav__bookmarks" href="#">Закладки: 0</a>
+        <a class="shop-nav__link shop-nav__cart shop-nav__cart--empty" href="#">Корзина: 0</a>
+        <a class="shop-nav__link shop-nav__order" href="#">Оформить заказ</a>
       </div>
     </div>
-    <nav class="main-nav container">
-      <div class="main-header__wrappre">
+    <div class="main-header__wrappre container">
+      <div class="main-header__column">
         <p class="main-header__info">Интернет-магазин строительных материалов<br> и инструментов для ремонта</p>
+      </div>
+      <div class="main-header__column">
         <address class="main-header__contacts">
           <span class="main-header__phone">+7 (812) 555-05-55</span>
           г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8
         </address>
+      </div>
+      <div class="main-header__column">
         <!-- Блок с кнопками входа и личного кабинета -->
         <ul class="user-nav">
           <li class="user-nav__item">
@@ -47,12 +51,12 @@
           </li>
         </ul>
       </div>
-
-
+    </div>
+    <nav class="main-nav container">
       <!-- Главное меню сайта -->
       <ul class="site-nav">
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#">Главная</a>
+          <a class="site-nav__link">Главная</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="#">Компания</a>
@@ -321,9 +325,9 @@
   <footer class="main-footer">
     <div class="main-footer__container container">
       <div class="main-footer__contacts">
-        <div class="main-footer__logo site-logo">
+        <a class="main-footer__logo site-logo">
           <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип Интернет-магазина Техномарт">
-        </div>
+        </a>
         <address class="main-footer__address">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55
@@ -339,7 +343,7 @@
             <a class="footer-site-nav__link" href="#">Новости</a>
           </li>
           <li class="footer-site-nav__item">
-            <a class="footer-site-nav__link" href="#">Каталог</a>
+            <a class="footer-site-nav__link" href="catalog.html">Каталог</a>
           </li>
           <li class="footer-site-nav__item">
             <a class="footer-site-nav__link" href="#">Доставка</a>
@@ -402,7 +406,7 @@
     <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 <!-- Попап с формой "написать нам" -->
-  <section class="modal modal--show modal-write-us">
+  <section class="modal modal-write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="modal-write-us__form" action="index.html" method="post">
       <div class="modal-write-us__wrapper">
@@ -422,7 +426,6 @@
       <div class="modal-write-us__wrapper modal-write-us__wrapper--gray">
         <button class="modal-write-us__btn btn btn--red" type="submit">Отправить</button>
       </div>
-
     </form>
     <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>

@@ -122,6 +122,10 @@ a {
   margin-bottom: 40px;
 }
 
+.main-header__column {
+  width: 300px;
+}
+
 .site-logo {
   display: block;
 
@@ -375,7 +379,7 @@ a {
 }
 
 .main-header__contacts {
-  width: 270px;
+  padding-right: 30px;
 
   text-align: center;
 
