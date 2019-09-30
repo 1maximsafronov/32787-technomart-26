@@ -110,8 +110,14 @@
             <!-- Фильр по цене -->
             <fieldset class="filters__group price-filter">
               <legend class="filters__title-group">Цена:</legend>
-              <div class="price-filter__range">
+              <div class="price-filter__range-controls range-controls">
                 <!-- Здесь будут ползунки цены -->
+                <div class="range-controls__scale">
+                  <div class="range-controls__bar"></div>
+                </div>
+                <div class="range-controls__toggle range-controls__toggle--min"></div>
+                <div class="range-controls__toggle range-controls__toggle--max"></div>
+
               </div>
               <p class="price-filter__value-range">
                 <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">

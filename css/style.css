@@ -1527,13 +1527,45 @@ a {
   line-height: 30px;
 }
 
-.price-filter__range {
+.price-filter__range-controls {
   width: 220px;
   height: 80px;
   margin-bottom: 9px;
-
+  padding: 0 20px;
   border-radius: 2px;
   background-color: #f7f3ec;
+  padding-top: 1px;
+  position: relative;
+}
+
+.range-controls__scale {
+  height: 2px;
+  background-color: #d7dcde;
+  margin-top: 38px;
+}
+
+.range-controls__bar {
+  height: 2px;
+  background-color: #00ca74;
+  width: 70%;
+}
+
+.range-controls__toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 0 0 #e0ddd8;
+  box-shadow: 0 2px 0 0 #e0ddd8;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  cursor: pointer;
+}
+
+.range-controls__toggle--max {
+  left: 145px;
 }
 
 .price-filter__value-range {
