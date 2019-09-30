@@ -517,6 +517,10 @@ a {
 .user-nav__user-name {
   padding-left: 47px;
   padding-right: 17px;
+  /* Поставил ширину потому что какойто фантомный пиксель
+    мешает при подстройке отступов, ставлю на 1 больше
+    переходит на другую строку, ставлю на 1 меньше
+    появляется дырка */
   width: 250px;
 }
 
@@ -986,9 +990,8 @@ a {
 }
 
 .products__title {
-  width: 180px;
-  margin: 0 auto 10px;
-  padding: 0;
+  padding: 0 20px;
+  margin: 0 0 10px;
 
   text-align: center;
 
@@ -1437,23 +1440,8 @@ a {
   padding: 0;
 }
 
+.price-filter__max,
 .price-filter__min {
-
-  width: 95px;
-  padding: 10px;
-
-  text-align: center;
-  text-transform: uppercase;
-
-  border: none;
-  background-color: #f7f3ec;
-
-  font-family: "PT Sans","Cuprum", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-}
-
-.price-filter__max {
 
   width: 95px;
   padding: 10px;
