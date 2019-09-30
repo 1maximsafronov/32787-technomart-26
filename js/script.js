@@ -111,6 +111,8 @@ if (rangeControls) {
   var rangeToggleMin = rangeControls.querySelector('.range-controls__toggle--min');
   var rangeToggleMax = rangeControls.querySelector('.range-controls__toggle--max');
   var rangeBar = rangeControls.querySelector('.range-controls__bar');
+  var inputMinPrice = document.querySelector('#filter-min-price');
+  var inputMaxPrice = document.querySelector('#filter-max-price');
   var startPointMin;
   var startPointMax;
   rangeToggleMin.addEventListener('mousedown', function(evnt) {
@@ -125,6 +127,7 @@ if (rangeControls) {
       if ((rangeToggleMin.offsetLeft - newPoint) >= 20 && (rangeToggleMin.offsetLeft - newPoint) <= 180) {
         rangeToggleMin.style.left = (rangeToggleMin.offsetLeft - newPoint) + 'px';
         rangeBar.style.marginLeft = rangeToggleMin.style.left;
+        inputMinPrice.value = Math.round(40000 / 180 * (rangeToggleMin.offsetLeft - newPoint - 20));
       };
     };
 
@@ -148,6 +151,7 @@ if (rangeControls) {
       if ((rangeToggleMax.offsetLeft - newPoint) >= 20 && (rangeToggleMax.offsetLeft - newPoint) <= 180) {
         rangeToggleMax.style.left = (rangeToggleMax.offsetLeft - newPoint) + 'px';
         rangeBar.style.marginRight = 200 - (rangeToggleMax.offsetLeft - newPoint) + 'px';
+        inputMaxPrice.value = Math.round(40000 / 180 * (rangeToggleMax.offsetLeft - newPoint - 20));
       };
 
     };
