@@ -249,7 +249,7 @@ a {
   padding: 0;
 }
 
-.shop-nav__search::before {
+.shop-nav__icon-search {
   position: absolute;
   top: 50%;
   left: 17px;
@@ -259,16 +259,12 @@ a {
   width: 17px;
   height: 17px;
 
-  content: "";
   transform: translateY(-50%);
-
+  fill: #ffffff;
   opacity: 0.3;
-  background-image: url("../img/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
-.shop-nav__search:hover::before {
+.shop-nav__search:hover .shop-nav__icon-search {
   opacity: 1;
 }
 
@@ -285,7 +281,6 @@ a {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
-
 }
 
 .shop-nav__search-input::placeholder {
@@ -318,6 +313,11 @@ a {
   background-color: #ffffff;
 }
 
+.shop-nav__search-input:focus + .shop-nav__icon-search {
+  fill: #ee3643;
+  opacity: 1;
+}
+
 .shop-nav__search-input:focus::placeholder {
   color: #000000;
 }
@@ -339,6 +339,10 @@ a {
 }
 
 .shop-nav__bookmarks {}
+
+.shop-nav__bookmarks--not-empty {
+  background-color: #ee3643;
+}
 
 .shop-nav__bookmarks:before {
   position: absolute;
@@ -514,31 +518,28 @@ a {
   margin-left: 20px;
 }
 
-.user-nav__login::before {
-  content: "";
+.user-nav__icon-login {
   position: absolute;
-  display: block;
+
   width: 20px;
   height: 17px;
   left: 14px;
   top: 50%;
-  background-image: url("../img/icon-login.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
   transform: translateY(-50%);
-  opacity: 0.3;
+  fill: #c5c5c5;
 }
 
-.user-nav__login:focus::before,
-.user-nav__login:hover::before {
-  opacity: 1;
+.user-nav__login:focus .user-nav__icon-login,
+.user-nav__login:hover .user-nav__icon-login {
+  fill: #32425c;
 }
 
-.user-nav__login:active::before {
-  opacity: 0.3;
+.user-nav__login:active .user-nav__icon-login {
+  fill: #c5c5c5;
 }
 
 .user-nav__user-name {
+
   padding-left: 47px;
   padding-right: 17px;
   /* Поставил ширину потому что какойто фантомный пиксель
@@ -557,27 +558,24 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-nav__user-name::before {
-  content: "";
+.user-nav__icon-user {
   position: absolute;
+
   left: 13px;
   top: 50%;
   width: 20px;
   height: 18px;
   transform: translateY(-50%);
-  background-image: url("../img/icon-user.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  opacity: 0.3;
+  fill: #c5c5c5;
 }
 
-.user-nav__user-name:focus::before,
-.user-nav__user-name:hover::before {
-  opacity: 1;
+.user-nav__user-name:focus .user-nav__icon-user,
+.user-nav__user-name:hover .user-nav__icon-user {
+  fill: #32425c;
 }
 
-.user-nav__user-name:active::before {
-  opacity: 0.3;
+.user-nav__user-name:active .user-nav__icon-user {
+  fill: #c5c5c5;
 }
 
 .user-nav__logout {
@@ -585,27 +583,23 @@ a {
 
 }
 
-.user-nav__logout:before {
-  content: "";
+.user-nav__icon-logout {
   width: 20px;
   height: 17px;
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  background-repeat: no-repeat;
-  background-image: url("../img/icon-logout.svg");
-  background-position: 0 0;
-  opacity: 0.3;
+  fill: #c5c5c5;
 }
 
-.user-nav__logout:focus:before,
-.user-nav__logout:hover:before {
-  opacity: 1;
+.user-nav__logout:focus .user-nav__icon-logout,
+.user-nav__logout:hover .user-nav__icon-logout {
+  fill: #32425c;
 }
 
-.user-nav__logout:active::before {
-  opacity: 0.3;
+.user-nav__logout:active .user-nav__icon-logout {
+  fill: #c5c5c5;
 }
 
 .user-nav__links {
@@ -1641,6 +1635,41 @@ a {
   opacity: 0.7;
 }
 
+/*
+  В ручную сделанные чекбоксы
+
+.filters__label-checkbox::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  border: 2px solid #c5c5c5;
+  width: 23px;
+  height: 23px;
+  border-radius: 2px;
+  content: "";
+
+}
+
+  Галочка для чекбокса. Не получается сделать обводку, stroke уменьшает толщину линии
+
+.filters__label-checkbox::after {
+  position: absolute;
+  top: 1px;
+  left: 4px;
+
+  display: block;
+
+  width: 23px;
+  height: 17px;
+  content: "";
+  background-image: url("../img/icon-checkbox-active.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 1;
+} */
+
 .filters__checkbox:checked+.filters__label-checkbox::before {
   background-image: url("../img/checkbox-on.svg");
 }
@@ -1666,25 +1695,34 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-
+  border: 4px solid #c5c5c5;
+  border-radius: 50%;
   display: block;
 
   width: 25px;
   height: 25px;
-  opacity: 0.7;
   content: "";
-
-  background-image: url("../img/radio-off.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
-.filters__radio:checked+.filters__label-radio::before {
-  background-image: url("../img/radio-on.svg");
+.filters__label-radio::after {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 50%;
+  display: block;
+  background-color: #c5c5c5;
+  width: 9px;
+  height: 9px;
+  content: "";
+  display: none;
+}
+
+.filters__radio:checked+.filters__label-radio::after {
+  display: block;
 }
 
 .filters__label-radio:hover::before {
-  opacity: 1;
+  border-color: #b5b5b5;
 }
 
 .filters__label-radio--disabled,
