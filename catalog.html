@@ -63,10 +63,10 @@
               </a>
               <ul class="user-nav__links">
                 <li class="user-nav__links-item">
-                  <a href="#" class="user-nav__link">Мои заказы</a>
+                  <a class="user-nav__link" href="#">Мои заказы</a>
                 </li>
                 <li class="user-nav__links-item">
-                  <a href="#" class="user-nav__link">Личный кабинет</a>
+                  <a class="user-nav__link" href="#">Личный кабинет</a>
                 </li>
               </ul>
           </div>
@@ -75,27 +75,13 @@
       <nav class="main-nav container">
       <!-- Главное меню сайта -->
         <ul class="site-nav">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Компания</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link">Каталог</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Новости</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Спецпредложения</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Доставка</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Контакты</a>
-          </li>
+          <li><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link" href="#">Компания</a></li>
+          <li><a class="site-nav__link">Каталог</a></li>
+          <li><a class="site-nav__link" href="#">Новости</a></li>
+          <li><a class="site-nav__link" href="#">Спецпредложения</a></li>
+          <li><a class="site-nav__link" href="#">Доставка</a></li>
+          <li><a class="site-nav__link" href="#">Контакты</a></li>
         </ul>
       </nav>
   </header>
@@ -105,7 +91,7 @@
       <!-- Внутренняя навигация -->
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link breadcrumbs__link--home" href="#"><span class="visually-hidden">Главная</span></a>
+          <a class="breadcrumbs__link breadcrumbs__link--home" href="index.html"><span class="visually-hidden">Главная</span></a>
         </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">Каталог</a>
@@ -133,7 +119,6 @@
                 </div>
                 <div class="range-controls__toggle range-controls__toggle--min"></div>
                 <div class="range-controls__toggle range-controls__toggle--max"></div>
-
               </div>
               <p class="price-filter__value-range">
                 <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">
