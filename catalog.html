@@ -89,7 +89,7 @@
       <!-- Внутренняя навигация -->
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Главная</a>
+          <a class="breadcrumbs__link breadcrumbs__link--home" href="#"><span class="visually-hidden">Главная</span></a>
         </li>
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="#">Каталог</a>
@@ -105,7 +105,7 @@
       <div class="main-content-wrapper">
         <!-- Фильтры -->
         <section class="filters">
-          <h2 class="filters__title">Фильтры</h2>
+          <h2 class="filters__title">Фильтр:</h2>
           <form class="filters__form" action="index.html" method="post">
             <!-- Фильр по цене -->
             <fieldset class="filters__group price-filter">
@@ -117,7 +117,7 @@
                 <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">
                 <label class="visually-hidden" for="filter-min-price">Минимальная цена</label>
                 &mdash;
-                <input class="price-filter__max" id="filter-max-price" type="text" name="max-price" value="3000">
+                <input class="price-filter__max" id="filter-max-price" type="text" name="max-price" value="30000">
                 <label class="visually-hidden" for="filter-max-price">Максимальная цена</label>
               </p>
             </fieldset>
@@ -169,20 +169,20 @@
           <h2 class="visually-hidden">Каталог перфораторов</h2>
           <!-- меню сортировки -->
           <div class="catalog__sort sorting">
-            <p class="sorting__title">Сортировка</p>
+            <p class="sorting__title">Сортировка:</p>
             <ul class="sorting__nav sorting-nav">
               <li class="sorting-nav__item">
-                <a class="sorting-nav__by-price">По цене</a>
+                <a class="sorting-nav__link sorting-nav__link--active sorting-nav__link--by-price">По цене</a>
               </li>
               <li class="sorting-nav__item">
-                <a class="sorting-nav__by-type">По типу</a>
+                <a class="sorting-nav__link sorting-nav__link--by-type">По типу</a>
               </li>
               <li class="sorting-nav__item">
-                <a class="sorting-nav__by-functions">По функционалу</a>
+                <a class="sorting-nav__link sorting-nav__link--by-functions">По функционалу</a>
               </li>
               <li class="sorting-nav__item">
-                <a class="sorting-nav__toggle sorting-nav__toggle--up">По возрастанию</a>
-                <a class="sorting-nav__toggle sorting-nav__toggle--down">По убыванию</a>
+                <a class="sorting-nav__toggle sorting-nav__toggle--up"><span class="visually-hidden">По возрастанию</span></a>
+                <a class="sorting-nav__toggle sorting-nav__toggle--down"><span class="visually-hidden">По убыванию</span></a>
               </li>
             </ul>
           </div>
