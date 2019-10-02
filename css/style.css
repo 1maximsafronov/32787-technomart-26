@@ -5,6 +5,7 @@
 
   src: url("../fonts/cuprum.woff") format('woff'), url("../fonts/cuprum.woff2") format('woff2');
 }
+
 @font-face {
   font-family: 'Cuprum';
   font-weight: bold;
@@ -12,6 +13,7 @@
 
   src: url("../fonts/cuprumbold.woff") format('woff'), url("../fonts/cuprumbold.woff2") format('woff2');
 }
+
 @font-face {
   font-family: 'Cuprum';
   font-weight: normal;
@@ -19,6 +21,7 @@
 
   src: url("../fonts/cuprumitalic.woff") format('woff'), url("../fonts/cuprumitalic.woff2") format('woff2');
 }
+
 @font-face {
   font-family: 'Cuprum';
   font-weight: bold;
@@ -26,6 +29,7 @@
 
   src: url("../fonts/cuprumbolditalic.woff") format('woff'), url("../fonts/cuprumbolditalic.woff2") format('woff2');
 }
+
 @font-face {
   font-family: 'PT Sans';
   font-weight: normal;
@@ -33,6 +37,7 @@
 
   src: url("../fonts/ptsans.woff") format('woff'), url("../fonts/ptsans.woff2") format('woff2');
 }
+
 @font-face {
   font-family: 'PT Sans';
   font-weight: bold;
@@ -427,6 +432,10 @@ a {
 
 .shop-nav__cart {}
 
+.shop-nav__cart--not-empty {
+  background-color: #ee3643;
+}
+
 .shop-nav__cart::before {
   position: absolute;
   top: 50%;
@@ -455,10 +464,6 @@ a {
 
 .shop-nav__cart:active::before {
   opacity: 0.5;
-}
-
-.shop-nav__cart--not-empty {
-  background-color: #ee3643;
 }
 
 .shop-nav__order {
@@ -747,10 +752,7 @@ a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
-  margin: 0;
   padding: 0 20px;
-
-  list-style: none;
 
   color: #ffffff;
   background-color: #32425c;
@@ -913,9 +915,7 @@ a {
   margin-bottom: 20px;
 
   -webkit-transition-timing-function: linear;
-
   -o-transition-timing-function: linear;
-
   transition-timing-function: linear;
   -webkit-transition-duration: 1s;
   -o-transition-duration: 1s;
@@ -930,9 +930,7 @@ a {
   z-index: 5;
 
   -webkit-transition-timing-function: linear;
-
   -o-transition-timing-function: linear;
-
   transition-timing-function: linear;
   -webkit-transition-duration: 1s;
   -o-transition-duration: 1s;
@@ -1142,6 +1140,7 @@ a {
 
 .products__item {
   position: relative;
+
   display: -ms-flex;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1202,8 +1201,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1433,6 +1432,7 @@ a {
 
 .menu-services__desc {
   position: relative;
+
   display: -ms-flex;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1454,9 +1454,7 @@ a {
   position: absolute;
 
   -webkit-box-flex: 1;
-
   -ms-flex-positive: 1;
-
   flex-grow: 1;
 
   opacity: 0;
@@ -1970,23 +1968,14 @@ a {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }
 
-.sorting-nav__item {
-  margin-right: 65px;
-}
-
-.sorting-nav__item:last-child {
-  margin-right: 0;
-}
 
 .sorting-nav__link {
+  margin-right: 65px;
+
   opacity: 0.3;
+  color: #000000;
   border-bottom: 1px dotted #ee3643;
 }
 
@@ -2153,16 +2142,13 @@ a {
   justify-content: flex-end;
 
   margin: 38px 0 35px;
-  padding: 0;
 
-  list-style: none;
 }
 
-.footer-site-nav__item {
-  margin-left: 60px;
-}
 
 .footer-site-nav__link {
+  margin-left: 60px;
+
   color: #f1f5f7;
 
   font-size: 18px;
