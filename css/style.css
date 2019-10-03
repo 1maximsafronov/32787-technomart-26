@@ -78,7 +78,8 @@ a {
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type="radio"].visually-hidden,
+.visually-hidden {
   position: absolute;
 
   overflow: hidden;
@@ -403,6 +404,8 @@ input[type="radio"].visually-hidden {
 .shop-nav__search-input:focus:-ms-input-placeholder {
   color: #000000;
 }
+
+
 
 .shop-nav__bookmarks {}
 
@@ -817,6 +820,9 @@ input[type="radio"].visually-hidden {
 }
 
 .promo {
+  margin-bottom: 53px;
+}
+.promo__inner-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -826,12 +832,8 @@ input[type="radio"].visually-hidden {
       -ms-flex-pack: justify;
           justify-content: space-between;
 
-  margin-bottom: 53px;
 }
-.promo__title {
-  flex: 1px 0 0;
-  flex-basis: 1;
-}
+
 .promo__item {
   position: relative;
 
