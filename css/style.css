@@ -828,7 +828,10 @@ input[type="radio"].visually-hidden {
 
   margin-bottom: 53px;
 }
-
+.promo__title {
+  flex: 1px 0 0;
+  flex-basis: 1;
+}
 .promo__item {
   position: relative;
 
