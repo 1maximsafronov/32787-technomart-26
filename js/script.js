@@ -60,6 +60,33 @@ function sliderAnimation(slider) {
   });
 };
 
+// Слайдер блока сервисов
+var services = document.querySelector('.services');
+if (services) {
+  var servicesMenu = services.querySelectorAll('.menu-services__item');
+  var servicesSlides = services.querySelectorAll('.menu-services__desc-item');
+  var activeSevicesMenu = servicesMenu[0];
+  var activeServicesSlide = servicesSlides[0];
+  activeSevicesMenu.classList.add("menu-services__item--active");
+  activeServicesSlide.classList.add("menu-services__desc-item--show");
+  function changeServicesSlide(menuItem, servicesSlideItem) {
+    menuItem.addEventListener("click", function(event) {
+      event.preventDefault();
+      activeSevicesMenu.classList.remove("menu-services__item--active");
+      activeSevicesMenu = menuItem;
+      activeSevicesMenu.classList.add("menu-services__item--active");
+      activeServicesSlide.classList.remove("menu-services__desc-item--show");
+      activeServicesSlide = servicesSlideItem;
+      activeServicesSlide.classList.add("menu-services__desc-item--show");
+    });
+  };
+  if (servicesMenu.length <= servicesSlides.length) {
+    for (var i = 0; i < servicesMenu.length; i++) {
+      changeServicesSlide(servicesMenu[i], servicesSlides[i]);
+    }
+  }
+
+};
 var modals = document.querySelectorAll('.modal');
 var mapLink = document.querySelector('.contacts__map-link');
 var writeUsLink = document.querySelector('.contacts__write-us');
@@ -78,6 +105,8 @@ if (writeUsLink) {
   writeUsLink.addEventListener("click", function(event) {
     event.preventDefault();
     writeUsModal.classList.add("modal--show");
+    var nameInput = writeUsModal.querySelector('[name = "name"]');
+    nameInput.focus();
   });
 }
 
@@ -104,10 +133,28 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+// Добавление товара в корзину при нажатии "Купить"
+var products = document.querySelector('.products');
+if (products) {
+  var productsArr = products.querySelectorAll('.products__item');
+  var addToCartModal = document.querySelector('.modal-add-in-cart');
+  function addToCart(productItem) {
+    var addToCartButton = productItem.querySelector('.products__buy');
+    addToCartButton.addEventListener('click', function(evnt) {
+      evnt.preventDefault();
+      addToCartModal.classList.add("modal--show");
+    });
+  };
+  if (addToCartModal) {
+    for (var i = 0; i < productsArr.length; i++) {
+      addToCart(productsArr[i]);
+    }
+  }
+};
 
+// Двигающиеся слайдеры цены
 var rangeControls = document.querySelector('.range-controls');
 if (rangeControls) {
-
   var rangeToggleMin = rangeControls.querySelector('.range-controls__toggle--min');
   var rangeToggleMax = rangeControls.querySelector('.range-controls__toggle--max');
   var rangeBar = rangeControls.querySelector('.range-controls__bar');

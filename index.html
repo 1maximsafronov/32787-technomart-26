@@ -37,21 +37,21 @@
       </div>
       <div class="main-header__column">
         <address class="main-header__contacts">
-          <span class="main-header__phone">+7 (812) 555-05-55</span>
+          <a class="main-header__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8
         </address>
       </div>
       <div class="main-header__column">
         <!-- Блок с кнопками входа и личного кабинета -->
         <div class="user-nav">
-            <a class="user-nav__btn user-nav__login btn" href="#">
+            <a class="user-nav__btn user-nav__login btn" href="login.html">
 							<svg class="user-nav__icon-login" xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="#c5c5c5">
 							  <path d="M14.875 8.5L6 0v6H0v5h6v6z"/>
 							  <path d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
 							</svg>
 							Войти
 						</a>
-            <a class="user-nav__btn user-nav__registration btn" href="#">Регистрация</a>
+            <a class="user-nav__btn user-nav__registration btn" href="registration.html">Регистрация</a>
         </div>
       </div>
     </div>
@@ -73,6 +73,7 @@
       <!-- Промо блок со слайдером -->
       <section class="promo">
         <h2 class="visually-hidden">Информация о промоакциях и скидках</h2>
+        <!-- Обёртка promo__inner-wrap для нормального отображения в IE -->
         <div class="promo__inner-wrap">
           <div class="promo__item promo__item--materials promo__item--new">
             <p class="promo__text">Материалы</p>
@@ -137,7 +138,7 @@
           <li class="products__item">
             <h3 class="products__title">Перфоратор BOSCH BFG 9000</h3>
             <p class="products__image">
-              <img width="218" height="170" src="img/Perforator-1.jpg" alt="Перфоратор Bosch BFG 9000">
+              <img width="218" height="170" src="img/perforator-1.jpg" alt="Перфоратор Bosch BFG 9000">
             </p>
             <p class="products__price-info">
               <del class="products__discount">32500 Р.</del>
@@ -150,7 +151,7 @@
           <li class="products__item">
             <h3 class="products__title">Перфоратор BOSCH BFG 3000</h3>
             <p class="products__image">
-              <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
+              <img width="218" height="170" src="img/perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
             </p>
             <p class="products__price-info">
               <del class="products__discount">22500 Р.</del>
@@ -163,7 +164,7 @@
           <li class="products__item">
             <h3 class="products__title">Перфоратор BOSCH BFG 6000</h3>
             <p class="products__image">
-              <img width="218" height="170" src="img/Perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
+              <img width="218" height="170" src="img/perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
             </p>
             <p class="products__price-info">
               <del class="products__discount">30500 Р.</del>
@@ -176,7 +177,7 @@
           <li class="products__item products__item--new">
             <h3 class="products__title">Перфоратор BOSCH BFG 2000</h3>
             <p class="products__image">
-              <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosсh BFG 2000">
+              <img width="218" height="170" src="img/perforator-2.jpg" alt="Перфоратор Bosсh BFG 2000">
             </p>
             <p class="products__price-info">
               <span class="products__price">12500 Р.</span>
@@ -206,7 +207,7 @@
           </li>
           <li class="popular-manufacturer__item">
             <a class="popular-manufacturer__link" href="#">
-              <img width="146" height="44" src="img/logo-DeWALT.png" alt="Логотип производителя DeWalt">
+              <img width="146" height="44" src="img/logo-dewalt.png" alt="Логотип производителя DeWalt">
             </a>
           </li>
           <li class="popular-manufacturer__item">
@@ -304,7 +305,7 @@
               <img width="300" height="158" src="img/small-map.png" alt="Офис по адресу Санкт-Петербург, ул. Большая Конюшенная 19/8">
             </a>
           </p>
-          <a class="contacts__write-us btn" href="#">Заблудились? Напишите нам!</a>
+          <a class="contacts__write-us btn" href="write-us.html">Заблудились? Напишите нам!</a>
         </section>
       </div>
 
@@ -319,7 +320,7 @@
         </a>
         <address class="main-footer__address">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          +7 (812) 555-05-55
+          <a class="main-footer__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </address>
       </div>
       <!-- Блок меню футера -->
@@ -369,17 +370,19 @@
       </div>
     </div>
   </footer>
+  <!-- Попап с картой -->
   <section class="modal  modal-map">
     <h2 class="visually-hidden">Как к нам проехать</h2>
-    <p class="modal-map__image">
+    <!-- <p class="modal-map__image">
       <img width="940" height="447" src="img/big-map.png" alt="Офис по адресу Санкт-Петербург, ул. Большая Конюшенная 19/8">
-    </p>
+    </p> -->
+    <iframe class="modal-map__image" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.1325976902585!2d30.3202367!3d59.9393385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1570119851347!5m2!1sru!2sru" width="940" height="447" style="border:0;" allowfullscreen=""></iframe>
     <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 <!-- Попап с формой "написать нам" -->
   <section class="modal modal-write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <form class="modal-write-us__form" action="index.html" method="post">
+    <form class="modal-write-us__form" action="https://echo.htmlacademy.ru" method="post">
       <div class="modal__wrapper">
         <p class="modal-write-us__name">
           <label class="modal-write-us__label" for="name">Ваше имя:</label>
@@ -398,6 +401,17 @@
         <button class="modal-write-us__btn btn btn--red" type="submit">Отправить</button>
       </div>
     </form>
+    <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+  </section>
+  <!-- Попап при добавлении товара в корзину -->
+  <section class="modal modal-add-in-cart">
+    <div class="modal__wrapper">
+      <h2 class="modal-add-in-cart__title ">Товар добавлен в корзину</h2>
+    </div>
+    <div class="modal__wrapper modal__wrapper--gray">
+      <a class="modal-add-in-cart__btn btn btn--red" href="#">Оформить заказ</a>
+      <button class="modal-add-in-cart__btn modal-add-in-cart__btn--continue btn" type="button">Продолжить покупки</button>
+    </div>
     <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
   <script src="js/script.js"></script>

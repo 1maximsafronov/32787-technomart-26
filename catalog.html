@@ -17,7 +17,7 @@
         <a class="main-header__logo site-logo" href="index.html">
 					<img class="main-header__logo-image" src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Интернет-магазина Техномарт">
 				</a>
-        <form class="shop-nav__search-form" action="index.html" method="get">
+        <form class="shop-nav__search-form" action="https://echo.htmlacademy.ru" method="get">
           <p class="shop-nav__search">
   	        <input class="shop-nav__search-input" id="site-search" type="text" name="search" value="" placeholder="Поиск:">
             <svg class="shop-nav__icon-search" xmlns="http://www.w3.org/2000/svg" width="17" height="17"  fill="#ffffff">
@@ -37,20 +37,20 @@
       </div>
       <div class="main-header__column">
         <address class="main-header__contacts">
-          <span class="main-header__phone">+7 (812) 555-05-55</span>
+          <a class="main-header__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           г.Санкт-Петербург, ул. Б.Конюшенная, д. 19/8
         </address>
       </div>
       <div class="main-header__column">
         <!-- Блок с кнопками входа и личного кабинета -->
         <div class="user-nav">
-            <a class="user-nav__btn user-nav__user-name btn" href="#">
+            <a class="user-nav__btn user-nav__user-name btn" href="user-profile.html">
               <svg class="user-nav__icon-user" xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="#c5c5c5">
                 <path  d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
               </svg>
               Равшан Джамшутович
             </a>
-            <a class="user-nav__btn user-nav__logout btn" href="#">
+            <a class="user-nav__btn user-nav__logout btn" href="logout.html">
               <svg class="user-nav__icon-logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" fill="#c5c5c5">
                 <g>
                   <path d="M21 8.5L12.125 0v6h-6v5h6v6z"/>
@@ -59,14 +59,10 @@
               </svg>
               <span class="visually-hidden">Выйти</span>
             </a>
-            <ul class="user-nav__links">
-              <li class="user-nav__links-item">
+            <div class="user-nav__links">
                 <a class="user-nav__link" href="#">Мои заказы</a>
-              </li>
-              <li class="user-nav__links-item">
                 <a class="user-nav__link" href="#">Личный кабинет</a>
-              </li>
-            </ul>
+            </div>
         </div>
       </div>
     </div>
@@ -104,7 +100,7 @@
         <!-- Фильтры -->
         <section class="filters">
           <h2 class="filters__title">Фильтр:</h2>
-          <form class="filters__form" action="index.html" method="post">
+          <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
             <!-- Фильр по цене -->
             <fieldset class="filters__group price-filter">
               <legend class="filters__title-group">Цена:</legend>
@@ -129,24 +125,24 @@
               <legend class="filters__title-group">Производители:</legend>
               <ul class="filters__list">
                 <li class="filters__item">
-                  <input class="filters__checkbox visually-hidden" id="Bosch" type="checkbox" name="manufacturers-checkbox" checked>
-                  <label class="filters__label-checkbox" for="Bosch">Bosch</label>
+                  <input class="filters__checkbox visually-hidden" id="bosch" type="checkbox" name="bosch" checked>
+                  <label class="filters__label-checkbox" for="bosch">Bosch</label>
                 </li>
                 <li class="filters__item">
-                  <input class="filters__checkbox visually-hidden" id="interskol" type="checkbox" name="manufacturers-checkbox">
+                  <input class="filters__checkbox visually-hidden" id="interskol" type="checkbox" name="interskol">
                   <label class="filters__label-checkbox" for="interskol">Интерскол</label>
                 </li>
                 <li class="filters__item">
-                  <input class="filters__checkbox visually-hidden" id="Makita" type="checkbox" name="manufacturers-checkbox" checked>
-                  <label class="filters__label-checkbox" for="Makita">Makita</label>
+                  <input class="filters__checkbox visually-hidden" id="makita" type="checkbox" name="makita" checked>
+                  <label class="filters__label-checkbox" for="makita">Makita</label>
                 </li>
                 <li class="filters__item">
-                  <input class="filters__checkbox visually-hidden" id="DeWalt" type="checkbox" name="manufacturers-checkbox">
-                  <label class="filters__label-checkbox" for="DeWalt">DeWalt</label>
+                  <input class="filters__checkbox visually-hidden" id="de-walt" type="checkbox" name="de-walt">
+                  <label class="filters__label-checkbox" for="de-walt">DeWalt</label>
                 </li>
                 <li class="filters__item">
-                  <input class="filters__checkbox visually-hidden" id="Hitachi" type="checkbox" name="manufacturers-checkbox">
-                  <label class="filters__label-checkbox" for="Hitachi">Hitachi</label>
+                  <input class="filters__checkbox visually-hidden" id="hitachi" type="checkbox" name="hitachi">
+                  <label class="filters__label-checkbox" for="hitachi">Hitachi</label>
                 </li>
               </ul>
             </fieldset>
@@ -190,7 +186,7 @@
             <li class="products__item">
               <h3 class="products__title">Перфоратор BOSCH BFG 3000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
+                <img width="218" height="170" src="img/perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
               </p>
               <p class="products__price-info">
                 <del class="products__discount">22500 Р.</del>
@@ -204,7 +200,7 @@
             <li class="products__item">
               <h3 class="products__title">Перфоратор BOSCH BFG 6000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
+                <img width="218" height="170" src="img/perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
               </p>
               <p class="products__price-info">
                 <del class="products__discount">30500 Р.</del>
@@ -218,7 +214,7 @@
             <li class="products__item products__item--new">
               <h3 class="products__title">Перфоратор BOSCH BFG 2000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosch BFG 2000">
+                <img width="218" height="170" src="img/perforator-2.jpg" alt="Перфоратор Bosch BFG 2000">
               </p>
               <p class="products__price-info">
                 <span class="products__price">12500 Р.</span>
@@ -231,7 +227,7 @@
             <li class="products__item">
               <h3 class="products__title">Перфоратор BOSCH BFG 3000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
+                <img width="218" height="170" src="img/perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
               </p>
               <p class="products__price-info">
                 <del class="products__discount">30500 Р.</del>
@@ -245,7 +241,7 @@
             <li class="products__item products__item--new">
               <h3 class="products__title">Перфоратор BOSCH BFG 6000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
+                <img width="218" height="170" src="img/perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
               </p>
               <p class="products__price-info">
                 <del class="products__discount">30500 Р.</del>
@@ -259,7 +255,7 @@
             <li class="products__item">
               <h3 class="products__title">Перфоратор BOSCH BFG 2000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosch BFG 2000">
+                <img width="218" height="170" src="img/perforator-2.jpg" alt="Перфоратор Bosch BFG 2000">
               </p>
               <p class="products__price-info">
                 <span class="products__price">25500 Р.</span>
@@ -272,7 +268,7 @@
             <li class="products__item products__item--new">
               <h3 class="products__title">Перфоратор BOSCH BFG 3000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
+                <img width="218" height="170" src="img/perforator-2.jpg" alt="Перфоратор Bosch BFG 3000">
               </p>
               <p class="products__price-info">
                 <del class="products__discount">22500 Р.</del>
@@ -286,7 +282,7 @@
             <li class="products__item">
               <h3 class="products__title">Перфоратор BOSCH BFG 6000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
+                <img width="218" height="170" src="img/perforator-3.jpg" alt="Перфоратор Bosch BFG 6000">
               </p>
               <p class="products__price-info">
                 <del class="products__discount">30500 Р.</del>
@@ -300,7 +296,7 @@
             <li class="products__item">
               <h3 class="products__title">Перфоратор BOSCH BFG 2000</h3>
               <p class="products__image">
-                <img width="218" height="170" src="img/Perforator-2.jpg" alt="Перфоратор Bosch BFG 2000">
+                <img width="218" height="170" src="img/perforator-2.jpg" alt="Перфоратор Bosch BFG 2000">
               </p>
               <p class="products__price-info">
                 <span class="products__price">25500 Р.</span>
@@ -349,7 +345,7 @@
   			</a>
         <address  class="main-footer__address">
           г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8<br>
-          +7 (812) 555-05-55
+          <a class="main-footer__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </address>
       </div>
       <!-- Блок меню футера -->
@@ -357,9 +353,9 @@
         <div class="footer-site-nav">
           <a class="footer-site-nav__link" href="#">Компания</a>
           <a class="footer-site-nav__link" href="#">Новости</a>
-          <a class="footer-site-nav__link" href="catalog.html">Каталог</a>
+          <a class="footer-site-nav__link">Каталог</a>
           <a class="footer-site-nav__link" href="#">Доставка</a>
-          <a class="footer-site-nav__link" href="catalog.html">Контакты</a>
+          <a class="footer-site-nav__link" href="#">Контакты</a>
         </div>
         <div class="footer-site-nav footer-site-nav--yellow-text">
           <a class="footer-site-nav__link" href="#">Материалы</a>
@@ -374,7 +370,7 @@
     <div class="main-footer__copyright copyright">
       <div class="main-footer__container container">
         <p class="copyright__company">
-          &copy;2010-2017 Компания &laquo;Техномарт&raquo; Все права защищены
+          &copy; 2010-2019 Компания &laquo;Техномарт&raquo; Все права защищены
         </p>
         <div class="main-footer__social social">
             <a class="social__link social__link--vk" href="#">
