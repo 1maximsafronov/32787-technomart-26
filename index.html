@@ -6,24 +6,7 @@
   <title>HTML Academy: Техномарт</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    background-image: url( "" );
-  }
-  /* Desktop */
- @media ( min-width: 960px ) {
-   HTML {
-     /* Desktop layout */
-     background-image: url( "preview/technomart-index.jpg" );
-   }
- }
-</style>
-<link href="pixelperfect/node_modules/pixel-glass/styles.css" rel="stylesheet">
-<script src="pixelperfect/node_modules/pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
+
 </head>
 
 <body>
@@ -400,7 +383,7 @@
     <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
 <!-- Попап с формой "написать нам" -->
-  <section class="modal modal-write-us">
+  <section class="modal modal--show modal-write-us">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="modal-write-us__form" action="https://echo.htmlacademy.ru" method="post">
       <div class="modal__wrapper">
@@ -414,7 +397,7 @@
         </p>
         <p class="modal-write-us__message">
           <label class="modal-write-us__label" for="text-message">Текст письма:</label>
-          <textarea class="modal-write-us__message-input" id="text-message" name="wrtie-us-text" rows="8" cols="80"></textarea>
+          <textarea class="modal-write-us__message-input" id="text-message" name="wrtie-us-text" rows="8" cols="80" placeholder="В свободной форме"></textarea>
         </p>
       </div>
       <div class="modal__wrapper modal__wrapper--gray">
