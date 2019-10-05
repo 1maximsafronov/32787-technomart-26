@@ -775,7 +775,9 @@ padding-left: 24px;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 
   padding: 0;
   padding-right: 23px;
@@ -792,7 +794,9 @@ padding-left: 24px;
 
 .site-nav__link {
   display: block;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 
   padding-top: 20px;
   padding-right: 20px;
@@ -1240,12 +1244,16 @@ padding-left: 24px;
   -webkit-box-align: center;
           align-items: center;
       -ms-flex-align: center;
+	-webkit-box-flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-	flex-grow: 1;
-	justify-content: flex-end;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 
 	margin: 0;
 	margin-bottom: 20px;
@@ -1266,7 +1274,6 @@ padding-left: 24px;
   display: block;
 
 	width: 150px;
-	margin-top: auto;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -2412,6 +2419,7 @@ padding-left: 24px;
   color: #ee3643;
 }
 
+
 /* Модальные окна */
 .modal {
   position: fixed;
@@ -2421,13 +2429,17 @@ padding-left: 24px;
 
   display: none;
 
-  -webkit-transform: translate(-50%,-50%);
-          -ms-transform: translate(-50%,-50%);
-      transform: translate(-50%,-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          -ms-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
+
 }
 
 .modal--show {
   display: block;
+
+  -webkit-animation: modal-animation-show 0.5s;
+          animation: modal-animation-show 0.5s;
 }
 
 .modal__close {
@@ -2467,8 +2479,8 @@ padding-left: 24px;
   margin: 0;
 }
 .modal-map__iframe {
-position: relative;
-z-index: 2;
+  position: relative;
+  z-index: 2;
 
   display: block;
 
@@ -2477,6 +2489,7 @@ z-index: 2;
 
   border: none;
 }
+
 .modal-write-us {
   width: 620px;
 
@@ -2487,6 +2500,11 @@ z-index: 2;
 
   font-size: 18px;
   line-height: 18px;
+}
+
+.modal-write-us--error {
+  -webkit-animation: modal-animation-error 0.5s;
+          animation: modal-animation-error 0.5s;
 }
 
 .modal__wrapper {
@@ -2633,4 +2651,99 @@ z-index: 2;
 .modal-add-in-cart__btn--continue {
   color: #000000;
   background-color: #ffffff;
+}
+
+/* Анимации для модальных окон */
+@-webkit-keyframes modal-animation-show {
+  0% {
+    -webkit-transform:translateX(-50%) translateY(2000px);
+            transform:translateX(-50%) translateY(2000px);
+  }
+
+  70% {
+    -webkit-transform:translateX(-50%) translateY(-70%);
+            transform:translateX(-50%) translateY(-70%);
+  }
+
+  90% {
+    -webkit-transform:translateX(-50%) translateY(-40%);
+            transform:translateX(-50%) translateY(-40%);
+  }
+
+  100% {
+    -webkit-transform:translateX(-50%) translateY(-50%);
+            transform:translateX(-50%) translateY(-50%);
+  }
+}
+
+@keyframes modal-animation-show {
+  0% {
+    -webkit-transform:translateX(-50%) translateY(2000px);
+            transform:translateX(-50%) translateY(2000px);
+  }
+
+  70% {
+    -webkit-transform:translateX(-50%) translateY(-70%);
+            transform:translateX(-50%) translateY(-70%);
+  }
+
+  90% {
+    -webkit-transform:translateX(-50%) translateY(-40%);
+            transform:translateX(-50%) translateY(-40%);
+  }
+
+  100% {
+    -webkit-transform:translateX(-50%) translateY(-50%);
+            transform:translateX(-50%) translateY(-50%);
+  }
+}
+
+@-webkit-keyframes modal-animation-error {
+  0%,
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-55%) translateY(-50%);
+            transform: translateX(-55%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(-45%) translateY(-50%);
+            transform: translateX(-45%) translateY(-50%);
+  }
+}
+
+@keyframes modal-animation-error {
+  0%,
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-55%) translateY(-50%);
+            transform: translateX(-55%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(-45%) translateY(-50%);
+            transform: translateX(-45%) translateY(-50%);
+  }
 }

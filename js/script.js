@@ -87,6 +87,7 @@ if (services) {
   }
 
 };
+
 var modals = document.querySelectorAll('.modal');
 var mapLink = document.querySelector('.contacts__map-link');
 var writeUsLink = document.querySelector('.contacts__write-us');
@@ -133,6 +134,21 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+if (writeUsModal) {
+  var writeUsForm = writeUsModal.querySelector('.modal-write-us__form');
+  writeUsForm.addEventListener("submit", function(evt) {
+
+    var name = writeUsForm.querySelector('[name = "name"]');
+    var email = writeUsForm.querySelector('[email = "email"]');
+    var message = writeUsForm.querySelector('[name = "wrtie-us-text"]');
+    if (!name.value || !email.value || !message.value) {
+      evt.preventDefault();
+      writeUsModal.classList.remove("modal-write-us--error");
+      writeUsModal.offsetWidth = writeUsModal.offsetWidth;
+      writeUsModal.classList.add("modal-write-us--error");
+    }
+  });
+}
 // Добавление товара в корзину при нажатии "Купить"
 var products = document.querySelector('.products');
 if (products) {
