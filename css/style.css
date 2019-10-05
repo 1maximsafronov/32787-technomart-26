@@ -244,7 +244,7 @@ input[type="radio"].visually-hidden,
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -779,7 +779,7 @@ padding-left: 24px;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: flex-start;
 
   padding: 0;
   padding-right: 23px;
