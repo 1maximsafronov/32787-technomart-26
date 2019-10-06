@@ -228,3 +228,27 @@ if (rangeControls) {
     document.addEventListener('mouseup', onMouseUp);
   });
 };
+
+// Доступность кнопок у карточек товаров
+var productItem = document.querySelectorAll('.products__item');
+if(productItem) {
+  function setFocusProduct(prodItem){
+    var prodItemBuy = prodItem.querySelector('.products__buy');
+    var prodItemBookmark = prodItem.querySelector('.products__add-bookmark');
+    prodItemBuy.addEventListener('focus', function(){
+      prodItem.classList.add("hover");
+    });
+    prodItemBuy.addEventListener('blur', function(){
+      prodItem.classList.remove("hover");
+    });
+    prodItemBookmark.addEventListener('focus', function(){
+      prodItem.classList.add("hover");
+    });
+    prodItemBookmark.addEventListener('blur', function(){
+      prodItem.classList.remove("hover");
+    });
+  }
+  for(var i = 0; i < productItem.length; i++){
+    setFocusProduct(productItem[i]);
+  }
+};
