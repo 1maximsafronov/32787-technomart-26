@@ -1118,7 +1118,8 @@ input[type="radio"].visually-hidden,
 .section-title {
   margin: 0;
   padding: 0;
-
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   text-transform: uppercase;
 
   color: #32425c;
@@ -1129,7 +1130,9 @@ input[type="radio"].visually-hidden,
 }
 
 .section-top-wrapper .btn {
-  width: 253px;
+  min-width: 253px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .popular-product {
@@ -2058,6 +2061,7 @@ input[type="radio"].visually-hidden,
 
 .sorting__title {
   margin: 0;
+  margin-right: 15px;
   padding: 0;
 }
 
@@ -2068,6 +2072,8 @@ input[type="radio"].visually-hidden,
   -webkit-box-pack: end;
       -ms-flex-pack: end;
     justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 
