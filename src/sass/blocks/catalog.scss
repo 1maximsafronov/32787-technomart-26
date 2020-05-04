@@ -1,0 +1,24 @@
+.catalog {
+  width: 700px;
+}
+
+.catalog__sort {
+  margin-bottom: 20px;
+}
+
+
+.catalog__list {
+  display: flex;
+
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+
+  list-style: none;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

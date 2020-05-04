@@ -1,0 +1,99 @@
+.filters {
+  width: 220px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.filters__title {
+  margin: 0;
+  margin-bottom: 11px;
+  padding-top: 11px;
+  padding-right: 18px;
+  padding-bottom: 9px;
+  padding-left: 19px;
+
+  text-transform: uppercase;
+
+  background-color: #f7f3ec;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.filters__group {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+
+  &:last-of-type {
+    margin-bottom: 56px;
+
+    border-bottom: none;
+  }
+
+  &--manufacturer {
+    margin-bottom: 17px;
+  }
+}
+
+
+.filters__title-group {
+  margin-bottom: 14px;
+
+  text-transform: uppercase;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.filters__list {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+
+  list-style: none;
+
+  text-transform: uppercase;
+
+  border-radius: 2px;
+
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.filters__item {
+  margin-bottom: 20px;
+}
+
+.filters__btn {
+  padding-top: 11px;
+  padding-right: 38px;
+  padding-bottom: 7px;
+  padding-left: 39px;
+
+  color: #000000;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+
+  &:hover,
+  &:focus {
+    color: #000000;
+    border-color: #bdc6ca;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: #000000;
+    border-color: #ee3643;
+    background-color: #ffffff;
+  }
+}

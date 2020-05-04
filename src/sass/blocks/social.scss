@@ -1,0 +1,41 @@
+.social {
+  display: flex;
+}
+
+.social__link {
+  position: relative;
+
+  display: block;
+
+  width: 42px;
+  height: 42px;
+  margin-right: 3px;
+
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #212a3a;
+  background-repeat: no-repeat;
+  background-position: 49% 48%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: #ee3643;
+  }
+
+
+  &--vk {
+    background-image: url("../img/icon-vk.svg");
+  }
+
+  &--fb {
+    background-image: url("../img/icon-fb.svg");
+  }
+
+  &--inst {
+    background-image: url("../img/icon-insta.svg");
+  }
+}

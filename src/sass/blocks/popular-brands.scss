@@ -1,0 +1,52 @@
+
+.popular-brands {
+  margin-bottom: 65px;
+}
+
+.popular-brands__title {
+  margin-top: 5px;
+}
+
+.popular-brands__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.popular-brands__item {
+  margin-bottom: 20px;
+}
+
+.popular-brands__link {
+  display: block;
+
+  width: 220px;
+  min-height: 145px;
+
+  text-align: center;
+
+  border: 1px solid #eaeaea;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+  }
+
+  &:active {
+    box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  }
+}
+
+
+.popular-brands__logo {
+  display: block;
+
+  margin-top: 31px;
+  margin-right: auto;
+  margin-left: auto;
+}

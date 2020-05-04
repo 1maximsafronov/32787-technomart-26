@@ -1,0 +1,15 @@
+.site-logo {
+  display: block;
+
+  background-color: #ee3643;
+  box-shadow: 0 5px 0 0 #b52933;
+
+  &:focus,
+  &:hover {
+    background-color: #ca2c37;
+  }
+
+  &:active {
+    background-color: #ba2732;
+  }
+}

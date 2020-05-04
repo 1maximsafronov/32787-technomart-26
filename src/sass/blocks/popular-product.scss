@@ -1,0 +1,22 @@
+.popular-product {
+  margin-bottom: 1px;
+}
+
+.popular-product__title {
+  margin-top: 5px;
+}
+
+.popular-product__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

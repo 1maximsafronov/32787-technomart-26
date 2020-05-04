@@ -1,0 +1,43 @@
+.price-filter__range-controls {
+  position: relative;
+
+  width: 220px;
+  height: 80px;
+  margin-bottom: 9px;
+  padding-top: 1px;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 20px;
+
+  border-radius: 2px;
+  background-color: #f7f3ec;
+}
+
+.price-filter__value-range {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.price-filter__max,
+.price-filter__min {
+  width: 95px;
+  padding-top: 9px;
+  padding-right: 10px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 2px;
+  background-color: #f7f3ec;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+}

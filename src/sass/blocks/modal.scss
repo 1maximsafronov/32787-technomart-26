@@ -1,0 +1,53 @@
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+
+  transform: translateY(-50%) translateX(-50%);
+
+  &--show {
+    display: block;
+
+    animation: modal-animation-show 0.5s;
+  }
+}
+
+
+.modal__close {
+  position: absolute;
+  z-index: 10;
+  top: 9px;
+  right: 9px;
+
+  width: 21px;
+  height: 21px;
+
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-top: 46px;
+  padding-right: 80px;
+  padding-bottom: 33px;
+  padding-left: 80px;
+}
+
+.modal__wrapper--gray {
+  padding-top: 37px;
+  padding-bottom: 37px;
+
+  background-color: #f4f4f4;
+}

@@ -1,0 +1,162 @@
+.product {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 220px;
+  margin-bottom: 20px;
+
+  border: 1px solid #eaeaea;
+
+  &--new {
+    &::after {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      overflow: hidden;
+
+      width: 60px;
+      height: 60px;
+
+      content: "";
+
+      background-image: url("../img/new-item.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  .hover,
+  &:hover,
+  &:focus {
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+  }
+}
+
+
+.product__title {
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  text-align: center;
+
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.product__image {
+  order: -1;
+
+  width: 218px;
+  height: 170px;
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.product__price-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-end;
+
+  margin: 0;
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.product__discount {
+  margin-bottom: 10px;
+
+  color: #a9a9a9;
+}
+
+.product__price {
+  display: block;
+
+  width: 150px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: #ffffff;
+  background-image: url("../img/red-button.svg");
+  background-repeat: no-repeat;
+  background-position: 8px 0;
+}
+
+.product__get {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+
+  width: 100%;
+  padding-top: 43px;
+  padding-right: 42px;
+  padding-bottom: 31px;
+  padding-left: 41px;
+
+  background-color: #ffffff;
+}
+
+.product:hover .product__get,
+.product.hover .product__get,
+.product:focus .product__get {
+  opacity: 1;
+}
+
+.product__buy {
+  position: relative;
+
+  display: block;
+
+  margin-bottom: 11px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+
+    display: block;
+
+    width: 15px;
+    height: 15px;
+
+    content: "";
+    transform: translateY(-50%);
+
+    opacity: 0.3;
+    background-image: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+
+.product__add-bookmark {
+  display: block;
+
+  padding-top: 8px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+}

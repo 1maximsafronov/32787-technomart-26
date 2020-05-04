@@ -1,0 +1,81 @@
+
+.modal-write-us {
+  width: 620px;
+
+  border-top: 7px solid #ff5257;
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+
+  font-size: 18px;
+  line-height: 18px;
+
+  &--error {
+    animation: modal-animation-error 0.5s;
+  }
+}
+
+
+.modal-write-us__form {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-write-us__email,
+.modal-write-us__name {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.modal-write-us__message {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-write-us__email-input,
+.modal-write-us__name-input {
+  display: block;
+
+  width: 220px;
+  margin-top: 10px;
+  padding: 8px 14px;
+
+  color: #999999;
+  border: 2px solid #dee3e4;
+  border-radius: 2px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.modal-write-us__message-input {
+  width: 100%;
+  height: 114px;
+  margin: 0;
+  margin-top: 10px;
+  padding: 8px 14px;
+
+  border: 2px solid #dee3e4;
+  border-radius: 2px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.modal-write-us__email-input:hover,
+.modal-write-us__message-input:hover,
+.modal-write-us__name-input:hover {
+  border: 2px solid #b5b5b5;
+}
+
+.modal-write-us__email-input:focus,
+.modal-write-us__message-input:focus,
+.modal-write-us__name-input:focus {
+  border: 2px solid #ee3643;
+}
+
+.modal-write-us__btn {
+  width: 100%;
+}

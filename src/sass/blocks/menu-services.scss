@@ -1,0 +1,137 @@
+.menu-services {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  color: #32425c;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    display: block;
+
+    width: 10px;
+    height: 279px;
+
+    content: "";
+    transform: translateY(-50%);
+
+    background-image: url("../img/service-shadow.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+
+.menu-services__item {
+  width: 240px;
+  padding-top: 14px;
+  padding-right: 22px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+
+  cursor: pointer;
+
+  color: #ffffff;
+  background-color: #32425c;
+  box-shadow: inset 0 -1px 0 0 #293449, inset 0 1px 0 0 #405069;
+
+  &:focus,
+  &:hover {
+    color: #ffffff;
+    background-color: #293449;
+  }
+
+  &--active {
+    color: #32425c;
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+}
+
+.menu-services__desc {
+  position: relative;
+
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+
+  width: auto;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.menu-services__desc-item {
+  position: absolute;
+
+  flex-grow: 1;
+
+  opacity: 0;
+  color: #000000;
+
+  &--show {
+    position: relative;
+
+    opacity: 1;
+  }
+
+  &--delivery {
+    background-image: url("../img/illustration-delivery.png");
+    background-repeat: no-repeat;
+    background-position: 151px 25px;
+  }
+
+  &--guarantee {
+    background-image: url("../img/illustration-guarantee.png");
+    background-repeat: no-repeat;
+    background-position: 239px 3px;
+  }
+
+  &--credit {
+    background-image: url("../img/illustration-credit.png");
+    background-repeat: no-repeat;
+    background-position: 165px 1px;
+  }
+}
+
+
+.menu-services__btn {
+  padding-right: 45px;
+  padding-left: 45px;
+}
+
+
+.menu-services__title {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+
+  text-transform: uppercase;
+
+  color: #32425c;
+
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.menu-services__text {
+  width: 320px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}

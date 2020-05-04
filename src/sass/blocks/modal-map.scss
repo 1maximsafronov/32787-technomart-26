@@ -1,0 +1,29 @@
+.modal-map {
+  background-color: #565656;
+  box-shadow: 0 0 15px 1px rgba(47, 42, 43, 0.5);
+}
+
+.modal-map__image {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 940px;
+  height: 447px;
+  margin: 0;
+}
+
+.modal-map__iframe {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  width: 940px;
+  height: 447px;
+
+  border: none;
+}

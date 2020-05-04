@@ -1,0 +1,80 @@
+/* Анимации для модальных окон */
+@keyframes modal-animation-show {
+  0% {
+    transform: translateX(-50%) translateY(2000px);
+  }
+
+  70% {
+    transform: translateX(-50%) translateY(-70%);
+  }
+
+  90% {
+    transform: translateX(-50%) translateY(-40%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@keyframes modal-animation-show {
+  0% {
+    transform: translateX(-50%) translateY(2000px);
+  }
+
+  70% {
+    transform: translateX(-50%) translateY(-70%);
+  }
+
+  90% {
+    transform: translateX(-50%) translateY(-40%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@keyframes modal-animation-error {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-55%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-45%) translateY(-50%);
+  }
+}
+
+@keyframes modal-animation-error {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-55%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-45%) translateY(-50%);
+  }
+}

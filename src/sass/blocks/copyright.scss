@@ -1,0 +1,42 @@
+.copyright__company {
+  width: 240px;
+  margin: 0;
+  margin-right: 150px;
+  padding-top: 2px;
+}
+
+.copyright__author {
+  display: flex;
+
+  margin-left: auto;
+  padding-top: 2px;
+}
+
+.copyright__mail {
+  width: 160px;
+  margin: 0;
+  margin-right: 29px;
+  padding: 0;
+}
+
+.copyright__site {
+  width: 110px;
+  margin: 0;
+  padding: 0;
+}
+
+.copyright__link {
+  display: block;
+
+  color: #ffd180;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: none;
+
+    color: #ee3643;
+  }
+}

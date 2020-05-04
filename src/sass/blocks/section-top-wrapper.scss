@@ -1,0 +1,18 @@
+.section-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+  padding: 25px;
+  padding-top: 25px;
+  padding-right: 24px;
+  padding-bottom: 26px;
+  padding-left: 28px;
+
+  background-color: #f9f5f0;
+}
+
+.section-top-wrapper .btn {
+  min-width: 253px;
+  align-self: flex-start;
+}

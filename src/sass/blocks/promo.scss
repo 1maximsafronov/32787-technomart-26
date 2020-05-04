@@ -1,0 +1,97 @@
+.promo {
+  margin-bottom: 33px;
+}
+
+.promo__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo__inner-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.promo__item {
+  position: relative;
+
+  width: 300px;
+  margin-bottom: 20px;
+  padding-top: 21px;
+  padding-right: 22px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+
+  color: #ffffff;
+  background-color: #ffbf47;
+
+  &--materials {
+    background-image: url("../img/icon-1.svg");
+    background-repeat: no-repeat;
+    background-position: 213px 31px;
+  }
+
+  &--instruments {
+    background-color: #3bbce3;
+    background-image: url("../img/icon-2.svg");
+    background-repeat: no-repeat;
+    background-position: 197px 33px;
+  }
+
+  &--tech {
+    background-color: #dc91d8;
+    background-image: url("../img/icon-3.svg");
+    background-repeat: no-repeat;
+    background-position: 191px 31px;
+  }
+
+  &--sales {
+    flex-grow: 1;
+
+    background-color: #8ed78f;
+    background-image: url("../img/icon-4.svg");
+    background-repeat: no-repeat;
+    background-position: 196px 26px;
+  }
+
+  &--delivery {
+    flex-grow: 1;
+
+    background-color: #ffc047;
+    background-image: url("../img/icon-5.svg");
+    background-repeat: no-repeat;
+    background-position: 191px 32px;
+  }
+
+  &--new::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    overflow: hidden;
+
+    width: 60px;
+    height: 60px;
+
+    content: "";
+
+    background-image: url("../img/new-item.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+
+.promo__text {
+  margin: 0;
+  margin-bottom: 12px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.promo__btn {
+  min-width: 135px;
+}

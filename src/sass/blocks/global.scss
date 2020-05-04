@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+  min-width: 960px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+
+  color: #000000;
+  background-color: #ffffff;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+a {
+  text-decoration: none;
+}
